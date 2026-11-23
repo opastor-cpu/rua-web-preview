@@ -3,17 +3,17 @@ export const WORLD_WIDTH = 800;
 export const WORLD_HEIGHT = 360;
 export const GROUND_Y = 290;
 export const GOAL_SCORE = 1000;
-export const INITIAL_SPEED = 140;
-export const MAX_SPEED = 250;
-export const MIN_CLEAR_SECONDS = 1.2;
+export const INITIAL_SPEED = 165;
+export const MAX_SPEED = 300;
+export const MIN_CLEAR_SECONDS = 1.05;
 
 const STEP = 1 / 120;
 const GRAVITY = 1200;
 const JUMP_VELOCITY = -500;
 const POINTS_PER_SECOND = 10;
 const EPSILON = 1e-8;
-const WARMUP_SECONDS = 8;
-const RAMP_SECONDS = 180;
+const WARMUP_SECONDS = 5;
+const RAMP_SECONDS = 110;
 const TRASH_SIZES = [[32, 20], [38, 22], [40, 24], [42, 18], [36, 16]];
 
 function difficultyAt(time) {
@@ -94,9 +94,9 @@ function spawnObstacle(state) {
   const difficulty = difficultyAt(state.time);
   let obstacle;
   // Teach one ground obstacle first; planes appear only after a comfortable introduction.
-  if (state.time >= 45 && roll < .12 + difficulty * .18) {
+  if (state.time >= 25 && roll < .15 + difficulty * .2) {
     obstacle = {type: 'plane', y: randomUnit(state) < .7 ? 232 : 204, width: 50, height: 25};
-  } else if (state.time >= 14 && roll < .6) {
+  } else if (state.time >= 8 && roll < .6) {
     const variant = Math.floor(randomUnit(state) * TRASH_SIZES.length);
     const [width, height] = TRASH_SIZES[variant];
     obstacle = {type: 'trash', variant, y: GROUND_Y - height, width, height};
@@ -106,13 +106,18 @@ function spawnObstacle(state) {
   const requestedWidth = Number(state.worldWidth);
   const width = Number.isFinite(requestedWidth) ? Math.max(320, requestedWidth) : WORLD_WIDTH;
   const lastRight = state.obstacles.reduce((right, item) => Math.max(right, item.x + item.width), -Infinity);
-  obstacle.x = Math.max(width + 24, lastRight + MAX_SPEED * MIN_CLEAR_SECONDS);
+  // Forecast until this group reaches the runner, including a viewport-resize backlog.
+  // Using the minimum travel speed makes the forecast conservative during acceleration.
+  const lookAhead = (Math.max(width + 24, lastRight) - state.player.x) / INITIAL_SPEED + 2;
+  const approachSpeed = INITIAL_SPEED + (MAX_SPEED - INITIAL_SPEED) * difficultyAt(state.time + lookAhead);
+  const minimumGap = approachSpeed * MIN_CLEAR_SECONDS + 36;
+  obstacle.x = Math.max(width + 24, lastRight + minimumGap);
   state.obstacles.push(obstacle);
-  // The same smooth curve adjusts spacing from 2.6–3.4s to a bounded 1.7–2.2s.
-  // A 300px hard floor also survives viewport changes and later acceleration.
-  // Even allowing for the runner's full width, it covers a jump and recovery at the cap.
-  const minimumInterval = 2.6 - .9 * difficulty;
-  const maximumInterval = 3.4 - 1.2 * difficulty;
+  // Spacing tightens from 2.1–2.7s to 1.35–1.75s without an abrupt difficulty step.
+  // The dynamic gap covers the runner's width, a full jump and recovery time;
+  // at the speed cap it still fits the shortest interval, even after a 50px plane.
+  const minimumInterval = 2.1 - .75 * difficulty;
+  const maximumInterval = 2.7 - .95 * difficulty;
   state.spawnCountdown = minimumInterval + randomUnit(state) * (maximumInterval - minimumInterval);
 }
 

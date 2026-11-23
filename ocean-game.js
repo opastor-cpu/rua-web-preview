@@ -186,7 +186,7 @@ if (trigger) {
     const openId=++openEpoch;
     dialog.showModal();document.body.classList.add('ocean-open');
     try{
-      loading ||= Promise.all([import('./ocean-engine.mjs?v=6'),import('./ocean-art.js?v=6'),import('./ocean-music.mjs?v=6')]);
+      loading ||= Promise.all([import('./ocean-engine.mjs?v=7'),import('./ocean-art.js?v=6'),import('./ocean-music.mjs?v=7')]);
       [engine,art,musicModule]=await loading;
       if(!dialog.open||openId!==openEpoch)return;
       if(!ctx)throw new Error('Canvas unavailable');

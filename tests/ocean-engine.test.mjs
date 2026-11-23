@@ -83,7 +83,7 @@ test('collision stops a run and pause or invalid time never advances it', () => 
   assert.equal(state.time, 0);
 });
 
-test('1000-point reward unlocks during the gentle ramp without ending the endless game', () => {
+test('1000-point reward unlocks during the bounded ramp without ending the endless game', () => {
   const state = safeRun(60, 102);
   assert.equal(GOAL_SCORE, 1000);
   assert.equal(state.score, 1020);
@@ -105,8 +105,8 @@ test('spawn gaps remain playable on mobile and through a viewport reduction', ()
     const sorted = [...state.obstacles].sort((a, b) => a.x - b.x);
     for (let j = 1; j < sorted.length; j++) {
       const gap = sorted[j].x - (sorted[j - 1].x + sorted[j - 1].width);
-      // A hard distance floor remains safe even after acceleration and viewport changes.
-      assert.ok(gap >= MAX_SPEED * MIN_CLEAR_SECONDS - .01, `gap ${gap}`);
+      // The gap accounts for the runner width and the speed when the pair approaches.
+      assert.ok((gap - 36) / state.speed >= MIN_CLEAR_SECONDS - .01, `gap ${gap}, speed ${state.speed}`);
     }
     observedPlanes += sorted.filter(o => o.type === 'plane').length;
     observedGround += sorted.filter(o => o.type !== 'plane').length;
@@ -133,7 +133,7 @@ test('reset preserves best, random source and responsive world width', () => {
   assert.equal(startGame(state), false);
 });
 
-test('difficulty starts flat for eight seconds, rises smoothly and stops increasing', () => {
+test('difficulty starts flat for five seconds, rises smoothly and stops increasing', () => {
   const state = createGame(seeded());
   startGame(state);
   state.player.x = -1000;
@@ -143,17 +143,19 @@ test('difficulty starts flat for eight seconds, rises smoothly and stops increas
     updateGame(state, 1 / 120);
     assert.ok(state.speed >= previousSpeed);
     assert.ok(state.speed >= INITIAL_SPEED && state.speed <= MAX_SPEED);
-    assert.ok(state.speed - previousSpeed < .008, 'speed must never jump suddenly');
-    if (state.time <= 8) assert.equal(state.speed, INITIAL_SPEED);
+    assert.ok(state.speed - previousSpeed < .016, 'speed must never jump suddenly');
+    if (state.time <= 5) assert.equal(state.speed, INITIAL_SPEED);
     if (i % 120 === 0) samples.push({time: state.time, speed: state.speed});
     previousSpeed = state.speed;
   }
-  assert.equal(INITIAL_SPEED, 140);
-  assert.equal(MAX_SPEED, 250);
-  assert.ok(samples.find(x => x.time >= 100).speed < 205, 'the reward still arrives at moderate speed');
+  assert.equal(INITIAL_SPEED, 165);
+  assert.equal(MAX_SPEED, 300);
+  assert.ok(samples.find(x => x.time >= 30).speed > 180);
+  assert.ok(samples.find(x => x.time >= 60).speed > 230);
+  assert.ok(samples.find(x => x.time >= 100).speed < MAX_SPEED, 'the reward arrives before the bounded ramp is complete');
   assert.equal(state.speed, MAX_SPEED);
-  assert.ok(Math.abs(samples[8].speed - INITIAL_SPEED) < .001, 'warmup joins the ramp without a step');
-  assert.ok(MAX_SPEED - samples[187].speed < .02, 'the ramp flattens before reaching its cap');
+  assert.ok(Math.abs(samples[5].speed - INITIAL_SPEED) < .001, 'warmup joins the ramp without a step');
+  assert.ok(MAX_SPEED - samples[114].speed < .05, 'the ramp flattens before reaching its cap');
 });
 
 test('obstacles have an easy introduction, five distinct trash variants and bounded spacing', () => {
@@ -166,22 +168,47 @@ test('obstacles have an easy introduction, five distinct trash variants and boun
       if (seen.has(obstacle)) continue;
       seen.add(obstacle);
       entries.push({time: state.time, obstacle});
-      if (state.time < 14) assert.equal(obstacle.type, 'barrel');
-      if (obstacle.type === 'plane') assert.ok(state.time >= 45);
+      if (state.time < 8) assert.equal(obstacle.type, 'barrel');
+      if (obstacle.type === 'plane') assert.ok(state.time >= 25);
       if (obstacle.type === 'trash') {
         variants.add(obstacle.variant);
         assert.ok(obstacle.width >= 32 && obstacle.width <= 42);
         assert.ok(obstacle.height >= 16 && obstacle.height <= 24);
         assert.equal(obstacle.y + obstacle.height, GROUND_Y);
       }
-      assert.ok(state.spawnCountdown >= 1.7 - 1e-8 && state.spawnCountdown <= 3.4 + 1e-8);
-      if (state.time < 8) assert.ok(state.spawnCountdown >= 2.6 && state.spawnCountdown <= 3.4);
-      if (state.time >= 188) assert.ok(state.spawnCountdown >= 1.7 - 1e-8 && state.spawnCountdown <= 2.2 + 1e-8);
+      assert.ok(state.spawnCountdown >= 1.35 - 1e-8 && state.spawnCountdown <= 2.7 + 1e-8);
+      if (state.time < 5) assert.ok(state.spawnCountdown >= 2.1 && state.spawnCountdown <= 2.7);
+      if (state.time >= 115) assert.ok(state.spawnCountdown >= 1.35 - 1e-8 && state.spawnCountdown <= 1.75 + 1e-8);
     }
   }
   assert.ok(Math.abs(entries[0].time - 2.2) <= 1 / 120 + 1e-7);
   assert.deepEqual([...variants].sort(), [0, 1, 2, 3, 4]);
   assert.ok(entries.some(x => x.obstacle.type === 'plane'));
+  const openingMinute = entries.filter(x => x.time < 60).length;
+  const lateMinute = entries.filter(x => x.time >= 240).length;
+  assert.ok(lateMinute >= 34 && lateMinute <= 45, 'late frequency stays inside the intended range');
+  assert.ok(lateMinute > openingMinute * 1.25, 'the ramp noticeably increases actual obstacle frequency');
+});
+
+test('shortest late interval delivers each plane on time without an offscreen queue', () => {
+  const state = createGame(() => 0); // Every late roll selects a low plane and the minimum interval.
+  startGame(state); state.time = 200; state.worldWidth = 480; state.spawnCountdown = 0;
+  setDucking(state, true); // Real player position, safely under every plane.
+  const seen = new WeakSet(), appearances = [];
+  for (let i = 0; i < 30 * 120; i++) {
+    updateGame(state, 1 / 120);
+    assert.equal(state.status, 'running');
+    for (const obstacle of state.obstacles) {
+      if (seen.has(obstacle)) continue;
+      seen.add(obstacle); appearances.push(state.time);
+      assert.equal(obstacle.x, 504, 'the spacing guard must not push normal arrivals farther offscreen');
+    }
+  }
+  assert.ok(appearances.length >= 22);
+  for (let i = 1; i < appearances.length; i++) {
+    const interval = appearances[i] - appearances[i - 1];
+    assert.ok(interval >= 1.35 - 1e-8 && interval <= 1.35 + 1 / 120 + 1e-8);
+  }
 });
 
 test('every ground obstacle is jumpable at both speed limits with a useful timing window', () => {
