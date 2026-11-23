@@ -1,0 +1,216 @@
+{
+  "activities": [
+    {
+      "id": "hora-planeta-2025",
+      "title": "Feria ambiental Apaga y Actúa",
+      "category": "Educación ambiental",
+      "date": "2025-03",
+      "date_label": "Marzo de 2025",
+      "date_precision": "month",
+      "place": "Plaza Mayta Cápac, Miraflores, Arequipa",
+      "summary": "RUA Perú Nodo UNSA participó en la feria por la Hora del Planeta con mensajes y dinámicas para promover hábitos de cuidado ambiental junto a organizaciones y vecinos de Miraflores.",
+      "source": "https://www.munimiraflores-arequipa.gob.pe/2025/03/24/exitosa-feria-ambiental-apaga-y-actua-por-la-hora-del-planeta/",
+      "publisher": "Municipalidad Distrital de Miraflores – Arequipa",
+      "images": [
+        {
+          "filename": "assets/rua-hora-planeta-2025.jpg",
+          "dimensions": {
+            "width": 2048,
+            "height": 1367
+          },
+          "credit": "Municipalidad Distrital de Miraflores – Arequipa",
+          "alt": "Voluntario de RUA comparte materiales de educación ambiental en la feria Apaga y Actúa de Miraflores.",
+          "context": "Educación ambiental y conversación con visitantes en el stand de RUA.",
+          "webp": {
+            "filename": "assets/rua-hora-planeta-2025.webp",
+            "width": 1600,
+            "height": 1068,
+            "bytes": 176774
+          }
+        }
+      ]
+    },
+    {
+      "id": "eco-innova-2025",
+      "title": "Eco Innova: ideas por un Perú verde",
+      "category": "Innovación y encuentros",
+      "date": "2025-03",
+      "date_label": "Marzo de 2025",
+      "date_precision": "month",
+      "place": "Arequipa, en el marco del XXII ENUMA",
+      "summary": "La feria Eco Innova reunió iniciativas de sostenibilidad en el marco del XXII ENUMA, organizado con RUA Perú Nodo UNSA y la Universidad Católica de Santa María. La UNSA presentó cinco emprendimientos y dos laboratorios de investigación.",
+      "source": "https://www.unsa.edu.pe/emprendimientos-y-laboratorios-de-la-unsa-impulsan-soluciones-ambientales-en-feria-eco-innova/",
+      "publisher": "UNSA – Oficina Universitaria de Imagen Institucional",
+      "images": [
+        {
+          "filename": "assets/rua-eco-innova-stand.jpg",
+          "dimensions": {
+            "width": 2560,
+            "height": 1707
+          },
+          "credit": "UNSA – Oficina Universitaria de Imagen Institucional",
+          "alt": "Participantes recorren los stands de emprendimientos y laboratorios en la feria Eco Innova de Arequipa.",
+          "context": "Stands de emprendimientos y laboratorios de la UNSA en la feria Eco Innova.",
+          "webp": {
+            "filename": "assets/rua-eco-innova-stand.webp",
+            "width": 1600,
+            "height": 1067,
+            "bytes": 270596
+          }
+        },
+        {
+          "filename": "assets/rua-eco-innova.jpg",
+          "dimensions": {
+            "width": 2560,
+            "height": 1707
+          },
+          "credit": "UNSA – Oficina Universitaria de Imagen Institucional",
+          "alt": "Expositora comparte información científica con asistentes de la feria Eco Innova.",
+          "context": "Intercambio de conocimientos entre expositores y asistentes de Eco Innova.",
+          "webp": {
+            "filename": "assets/rua-eco-innova.webp",
+            "width": 1600,
+            "height": 1067,
+            "bytes": 148294
+          }
+        }
+      ]
+    },
+    {
+      "id": "enuma-2025",
+      "title": "XXII Encuentro Nacional de Universidades y Medio Ambiente",
+      "category": "Formación ambiental",
+      "date": "2025-03-04",
+      "date_label": "4 al 8 de marzo de 2025",
+      "date_precision": "day_range",
+      "place": "Campus de la UNSA y de la UCSM, Arequipa",
+      "summary": "Los nodos UNSA y UCSM de RUA Perú organizaron un encuentro sobre biodiversidad, gestión ambiental, cambio climático y educación ambiental. ICIGA–UNSA participó con una ponencia sobre la neblina como fuente de vida en el desierto.",
+      "source": "https://www.unsa.edu.pe/iciga/Actividades/xxii-encuentro-nacional-de-universidades-y-medio-ambiente-enuma/",
+      "publisher": "ICIGA–UNSA",
+      "images": [
+        {
+          "filename": "assets/rua-enuma-2025.jpg",
+          "dimensions": {
+            "width": 2048,
+            "height": 1536
+          },
+          "credit": "ICIGA–UNSA",
+          "alt": "Ponencia de ICIGA–UNSA durante el XXII ENUMA en Arequipa.",
+          "context": "Ponencia de ICIGA–UNSA durante el encuentro ENUMA en Arequipa.",
+          "webp": {
+            "filename": "assets/rua-enuma-2025.webp",
+            "width": 1600,
+            "height": 1200,
+            "bytes": 102258
+          }
+        }
+      ]
+    },
+    {
+      "id": "chili-2024",
+      "title": "Una jornada por el río Chili",
+      "category": "Acción en campo",
+      "date": "2024-07-20",
+      "date_label": "20 de julio de 2024",
+      "date_precision": "day",
+      "place": "Riberas del río Chili, Tiabaya, Arequipa",
+      "summary": "RUA se sumó a estudiantes de Trabajo Social de la UNSA, voluntarios y entidades locales para retirar residuos de las riberas del río Chili en Tiabaya. Una jornada de trabajo compartido por el cuidado del agua y del entorno.",
+      "source": "https://www.unsa.edu.pe/estudiantes-de-la-escuela-profesional-de-trabajo-social-realizaron-limpieza-en-las-riberas-del-rio-chili-en-tiabaya/",
+      "publisher": "UNSA – Oficina Universitaria de Imagen Institucional",
+      "images": [
+        {
+          "filename": "assets/rua-chili-jornada.jpg",
+          "dimensions": {
+            "width": 1574,
+            "height": 885
+          },
+          "credit": "UNSA – Oficina Universitaria de Imagen Institucional",
+          "alt": "Voluntarios de RUA, estudiantes y organizaciones participantes en la jornada de limpieza del río Chili en Tiabaya.",
+          "context": "RUA, estudiantes y organizaciones se reúnen en una jornada compartida por el río Chili.",
+          "webp": {
+            "filename": "assets/rua-chili-jornada.webp",
+            "width": 1574,
+            "height": 885,
+            "bytes": 260600
+          }
+        },
+        {
+          "filename": "assets/rua-chili-equipo.jpg",
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "credit": "UNSA – Oficina Universitaria de Imagen Institucional",
+          "alt": "Participantes reúnen sacos con residuos durante la limpieza de las riberas del río Chili.",
+          "context": "Recolección de residuos durante la jornada de limpieza en las riberas del río Chili.",
+          "webp": {
+            "filename": "assets/rua-chili-equipo.webp",
+            "width": 1280,
+            "height": 720,
+            "bytes": 281640
+          }
+        }
+      ]
+    },
+    {
+      "id": "educca-2023",
+      "title": "Educación ambiental en las aulas",
+      "category": "Educación ambiental",
+      "date": "2023-10",
+      "date_label": "Octubre de 2023",
+      "date_precision": "month",
+      "place": "Instituciones educativas de Cerro Colorado, Arequipa",
+      "summary": "Voluntarios de RUA UNSA participaron en talleres del programa EDUCCA de Cerro Colorado sobre manejo de residuos y reciclaje, junto a personal municipal, MINAM y Ccaytos AQP.",
+      "source": "https://mdcc.gob.pe/%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%9C%F0%9D%90%A2%F0%9D%90%9A%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%AC-%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%A7-%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%A9%F0%9D%90%AB/",
+      "publisher": "Municipalidad Distrital de Cerro Colorado",
+      "images": [
+        {
+          "filename": "assets/rua-educca-taller.jpg",
+          "dimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "credit": "Municipalidad Distrital de Cerro Colorado",
+          "alt": "Voluntarios de RUA y estudiantes participan en un taller sobre separación de residuos en Cerro Colorado.",
+          "context": "Voluntarios de RUA y estudiantes comparten un taller de separación de residuos.",
+          "webp": {
+            "filename": "assets/rua-educca-taller.webp",
+            "width": 1600,
+            "height": 1200,
+            "bytes": 103746
+          }
+        }
+      ]
+    },
+    {
+      "id": "hunter-sostenible-2023",
+      "title": "Hunter Sostenible en el Corso de la Amistad",
+      "category": "Sensibilización ciudadana",
+      "date": "2023-06",
+      "date_label": "Junio de 2023",
+      "date_precision": "month",
+      "place": "Distrito Jacobo Hunter, Arequipa",
+      "summary": "Los nodos UNSA y UCSM de RUA participaron en la campaña Hunter Sostenible durante el Corso de la Amistad, junto a organizaciones y programas ambientales. La jornada promovió la conciencia ambiental y la recuperación de residuos.",
+      "source": "https://www.gob.pe/institucion/munijacobohunter/noticias/777235-primera-campana-de-sensibilizacion-ambiental-hunter-sostenible-en-el-corso-de-la-amistad-2023",
+      "publisher": "Municipalidad Distrital Jacobo Hunter",
+      "images": [
+        {
+          "filename": "assets/rua-hunter-sostenible.jpg",
+          "dimensions": {
+            "width": 2048,
+            "height": 1538
+          },
+          "credit": "Municipalidad Distrital Jacobo Hunter",
+          "alt": "Participantes de la campaña ambiental Hunter Sostenible durante el Corso de la Amistad de 2023.",
+          "context": "Participantes de la campaña municipal Hunter Sostenible durante el Corso de la Amistad.",
+          "webp": {
+            "filename": "assets/rua-hunter-sostenible.webp",
+            "width": 1600,
+            "height": 1202,
+            "bytes": 341614
+          }
+        }
+      ]
+    }
+  ]
+}

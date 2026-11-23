@@ -17,6 +17,31 @@ document.addEventListener('keydown', event => { if (event.key === 'Escape' && me
 document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
 matchMedia('(min-width: 851px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
 
+const socialToggle = document.querySelector('#social-toggle');
+const socialPanel = document.querySelector('#social-panel');
+function closeSocial(returnFocus = false) {
+  if (!socialPanel) return;
+  socialPanel.hidden = true;
+  socialToggle.setAttribute('aria-expanded', 'false');
+  socialToggle.setAttribute('aria-label', 'Abrir redes sociales de RUA');
+  if (returnFocus) socialToggle.focus();
+}
+socialToggle?.addEventListener('click', () => {
+  const opening = socialPanel.hidden;
+  socialPanel.hidden = !opening;
+  socialToggle.setAttribute('aria-expanded', String(opening));
+  socialToggle.setAttribute('aria-label', `${opening ? 'Cerrar' : 'Abrir'} redes sociales de RUA`);
+  if (opening) socialPanel.querySelector('a').focus();
+});
+document.querySelector('.social-close')?.addEventListener('click', () => closeSocial(true));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && socialPanel && !socialPanel.hidden) closeSocial(true);
+});
+document.addEventListener('click', event => {
+  if (!event.target.closest('.social-rail')) closeSocial();
+});
+matchMedia('(max-width: 850px)').addEventListener('change', event => { if (event.matches) closeSocial(); });
+
 document.querySelectorAll('.filter-button').forEach(button => {
   button.addEventListener('click', () => {
     document.querySelectorAll('.filter-button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
@@ -37,9 +62,10 @@ form?.addEventListener('submit', event => {
   event.preventDefault();
   const data = new FormData(form);
   const name = String(data.get('name') || '').trim();
+  const organization = String(data.get('organization') || '').trim();
   const interest = String(data.get('interest'));
   const message = String(data.get('message') || '').trim();
-  draftMessage = `Hola, equipo de RUA Perú – Nodo UNSA.${name ? ` Soy ${name}.` : ''}\nMe interesa ${interest}.${message ? `\n${message}` : ''}\n¿Podrían orientarme?`;
+  draftMessage = `Hola, equipo de RUA Perú – Nodo UNSA.${name ? ` Soy ${name}.` : ''}${organization ? `\nRepresento a ${organization}.` : ''}\n${organization ? 'Nos' : 'Me'} interesa ${interest}.${message ? `\n${message}` : ''}\n¿Podrían orientarme?`;
   document.querySelector('#message-preview').textContent = draftMessage;
   const contactLink = document.querySelector('#whatsapp-link');
   contactLink.href = interest === 'participar en el voluntariado' ? 'https://wa.link/uts8bs' : 'https://wa.link/3i4ec9';
