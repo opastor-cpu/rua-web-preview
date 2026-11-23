@@ -153,52 +153,67 @@ export function drawScene(ctx, {time = 0, distance = 0, score = 0, width = 800, 
 }
 
 const palette = {
-  H: C.hair, h: C.hairLight, S: C.skin, s: C.skinLight, E: C.ink,
-  T: C.shirt, t: C.shirtLight, G: C.leaf, g: '#529478',
-  D: C.denim, d: C.denimDark, W: C.shoe, w: C.sole,
+  H: '#302626', h: '#594038', l: '#88604a', S: '#d49c7b', s: '#f1bc96',
+  E: '#233447', I: '#fff9e8', B: '#e9898d', M: '#b65f62',
+  T: '#27343b', t: '#415151', G: '#a4d78a', g: '#5b9d76',
+  D: '#6699bd', d: '#416c96', W: '#fff0da', P: '#efaaa0', w: '#34516b',
 };
 
+// Lucianita: an original chibi sprite, 18 × 28 pixels at a 2px scale.
+// The large bright eyes, rosy cheeks and leaf hair clip remain legible on mobile.
 const standing = [
-  '.....HHHH......',
-  '....HHhhHH.....',
-  '...HHHHhHHH....',
-  '...HHsssssH....',
-  '...HHsssEs.....',
-  '...HHsssss.....',
-  '...HHHsss......',
-  '...HHHTss......',
-  '..HHHHTTTTT....',
-  '..HHHTTTTTTT...',
-  '..HHHTTTGTTT...',
-  '..HHtTTGgTTT...',
-  '...HtTTTTTTs...',
-  '....TTTTTTTs...',
-  '....TTTTTTTs...',
-  '....DDDDDDD....',
+  '......HHHHHH......',
+  '....HHHhhhhHHH....',
+  '...HHhhhllhhhHH...',
+  '...HHhhHHHHhHHH...',
+  '..HHHhHHssssHHGg..',
+  '..HHHHssssssssHg..',
+  '..HHHHssEEssEEsH..',
+  '..HHHHssEIssEIsH..',
+  '..HHHHssEEssEEsH..',
+  '..HHHHsBBssssBBH..',
+  '..HHHHssssMsssHH..',
+  '...HHHHssssssHH...',
+  '...HHHHHssssHH....',
+  '...HHHHTTssTT.....',
+  '..HHHHTTTTTTTT....',
+  '..HHHtTTTTTTTTt...',
+  '..HHHtTTTGTTTTs...',
+  '...HHTTTGgTTTTs...',
+  '...HHtTTTTTTTTs...',
+  '....HtTTTTTTTT....',
 ];
 
 const legs = [
-  ['....DDDDddd....','....DDD.ddd....','...DDD...ddd...','...DD.....dd...','...DD.....dd...','..WWW.....WWW..','..www.....www..','...............'],
-  ['....DDDDddd....','.....DDDdd.....','.....DDddd.....','.....DD.ddd....','.....DD..dd....','.....WW..WW....','.....ww..ww....','...............'],
-  ['....dddDDDD....','....ddd.DDD....','...ddd...DDD...','...dd.....DD...','...dd.....DD...','..WWW.....WWW..','..www.....www..','...............'],
-  ['....dddDDDD....','.....dddDD.....','.....dddDD.....','....ddd.DD.....','....dd..DD.....','....WW..WW.....','....ww..ww.....','...............'],
+  ['......DDDDddd.....','......DDD.ddd.....','.....DDD...ddd....','....DDD.....ddd...',
+   '....DD.......dd...','...WWW......WWW...','...WPW......WPW...','...www......www...'],
+  ['......DDDDddd.....','.......DDDdd......','.......DDddd......','.......DD.ddd.....',
+   '.......DD..dd.....','.......WW..WW.....','.......PW..PW.....','.......ww..ww.....'],
+  ['......dddDDDD.....','......ddd.DDD.....','.....ddd...DDD....','....ddd.....DDD...',
+   '....dd.......DD...','...WWW......WWW...','...WPW......WPW...','...www......www...'],
+  ['......dddDDDD.....','.......dddDD......','.......dddDD......','......ddd.DD......',
+   '......dd..DD......','......WW..WW......','......WP..WP......','......ww..ww......'],
 ];
-
+const jumpingLegs = [
+  '......DDDDddd.....','.....DDDDD.ddd....','.....DD....ddd....','.....WW.....ddd...',
+  '.....PW......dd...','.....ww......WW...','.............PW...','.............ww...',
+];
 const crouched = [
-  '.........HHHHH.......',
-  '.......HHHhhHHH......',
-  '......HHHHssssH......',
-  '.....HHHHssssEs......',
-  '....HHHHHsssss.......',
-  '...HHHHTTTTss........',
-  '..HHHTTTTTTTTT.......',
-  '..HHTTTTTGTTTTs......',
-  '...TTTTTTgTTTTsss....',
-  '....DDDDDDTTT...ss...',
-  '....DDdddDD..........',
-  '...DDD..dddDD........',
-  '..WWW....dddWWW......',
-  '..www.......www......',
+  '..........HHHHHH......',
+  '........HHHhhhhHHH....',
+  '.......HHHsssssssHg...',
+  '......HHHssEEssEEsH...',
+  '.....HHHHssEIssEIsH...',
+  '....HHHHHsBBsssBBsH...',
+  '...HHHHHHssssMsssHH...',
+  '..HHHHTTTTssssssHH....',
+  '..HHHTTTTTTTTTTTss....',
+  '...TTTTTTGgTTTTTsss...',
+  '....DDDDTTTTTTTT.ss...',
+  '...DDdddDDTTTT........',
+  '..DDD...dddDD.........',
+  '.WWPW....dddWWPW......',
+  '.wwww.......wwww......',
 ];
 
 function sprite(ctx, rows, x, y, unit = 2) {
@@ -211,62 +226,143 @@ function sprite(ctx, rows, x, y, unit = 2) {
 }
 
 export function drawRunner(ctx, {x = 78, y = 290, ducking = false, running = false, time = 0} = {}) {
-  const frame = running ? Math.floor(time * 11) % 4 : 1;
+  const airborne = y < 288;
+  const frame = running && !airborne ? Math.floor(time * 10) % 4 : 1;
   ctx.save();
   ctx.imageSmoothingEnabled = false;
-  // A small shadow anchors the character without changing the collision bounds.
-  if (y >= 288) pixel(ctx, x + 3, 290, ducking ? 33 : 25, 3, '#b79f72');
-  if (ducking) {
-    sprite(ctx, crouched, x, y - 28);
-    if (running && frame % 2) pixel(ctx, x + 28, y - 4, 8, 2, C.shoe);
-  } else {
-    const bob = running && y >= 288 && frame % 2 ? 1 : 0;
-    sprite(ctx, [...standing, ...legs[frame]], x, y - 48 + bob);
-    // The near arm alternates with the legs; the green sprout remains readable.
-    if (running && frame % 2 === 0) {
-      pixel(ctx, x + 20, y - 24 + bob, 4, 8, C.skin);
-      pixel(ctx, x + 23, y - 25 + bob, 7, 4, C.skinLight);
-    } else {
-      pixel(ctx, x + 8, y - 23 + bob, 4, 8, C.skin);
-      pixel(ctx, x + 4, y - 18 + bob, 6, 4, C.skinLight);
+  if (!airborne) pixel(ctx, x + 4, 290, ducking ? 35 : 29, 3, '#b79f72');
+  if (ducking && !airborne) {
+    sprite(ctx, crouched, x, y - 30);
+    if (running && frame % 2) {
+      pixel(ctx, x + 28, y - 4, 7, 2, palette.W);
+      pixel(ctx, x + 31, y - 4, 2, 2, palette.P);
     }
+  } else {
+    const bob = running && !airborne && frame % 2 ? 1 : 0;
+    const top = y - 56 + bob;
+    // Loose hair sways behind her as the two pairs of running frames alternate.
+    const sway = airborne ? -2 : frame % 2 ? 0 : -2;
+    pixel(ctx, x + 4 + sway, top + 19, 6, 12, palette.H);
+    pixel(ctx, x + 2 + sway, top + 27, 6, 8, palette.H);
+    pixel(ctx, x + 4 + sway, top + 25, 2, 8, palette.h);
+    sprite(ctx, [...standing, ...(airborne ? jumpingLegs : legs[frame])], x, top);
+    // Small curved hands and contrasting sleeves preserve the friendly silhouette.
+    if (airborne) {
+      pixel(ctx, x + 27, top + 30, 4, 6, palette.S);
+      pixel(ctx, x + 30, top + 27, 4, 6, palette.s);
+      pixel(ctx, x + 6, top + 32, 4, 6, palette.S);
+      pixel(ctx, x + 3, top + 30, 5, 4, palette.s);
+    } else if (running && frame % 2 === 0) {
+      pixel(ctx, x + 27, top + 31, 4, 6, palette.S);
+      pixel(ctx, x + 29, top + 29, 5, 5, palette.s);
+      pixel(ctx, x + 9, top + 33, 3, 6, palette.S);
+    } else {
+      pixel(ctx, x + 9, top + 31, 4, 7, palette.S);
+      pixel(ctx, x + 5, top + 35, 6, 4, palette.s);
+      pixel(ctx, x + 28, top + 34, 3, 6, palette.S);
+    }
+    // A one-pixel smile and a cream neckline add detail without a facial texture.
+    pixel(ctx, x + 20, top + 22, 4, 1, palette.M);
+    pixel(ctx, x + 18, top + 28, 6, 1, '#b2b8a7');
   }
   ctx.restore();
 }
 
-function barrel(ctx, x, y, w, h) {
-  pixel(ctx, x + 2, y, w - 4, 3, '#9f7252');
-  pixel(ctx, x, y + 3, w, h - 6, '#695a45');
-  pixel(ctx, x + 3, y + 4, w - 6, h - 8, '#8b7453');
-  pixel(ctx, x + 4, y + 5, 3, h - 10, '#aa8a5a');
-  pixel(ctx, x, y + 5, w, 3, '#263e3d');
-  pixel(ctx, x, y + h - 9, w, 3, '#263e3d');
-  pixel(ctx, x + 2, y + h - 3, w - 4, 3, '#394a3c');
-  const center = x + Math.floor(w / 2);
-  pixel(ctx, center - 5, y + 11, 10, 10, '#f0c75d');
-  pixel(ctx, center - 1, y + 12, 2, 3, C.oil);
-  pixel(ctx, center - 3, y + 15, 6, 4, C.oil);
-  pixel(ctx, center - 2, y + 19, 4, 1, C.oil);
+function barrel(ctx, x, y, w, h, time) {
+  const center = Math.round(x + w / 2);
+  const bodyX = x + 3, bodyW = w - 6, bodyH = h - 4;
+  // Oil remains within the barrel's footprint: its visible puddle has no hidden reach.
+  pixel(ctx, x + 2, y + h - 5, w - 4, 5, '#26383e');
+  pixel(ctx, x, y + h - 3, w, 3, '#26383e');
+  pixel(ctx, x + 5, y + h - 3, 8, 1, '#4f807b');
+  pixel(ctx, x + w - 11, y + h - 2, 6, 1, '#766781');
+  pixel(ctx, bodyX + 2, y, bodyW - 4, 2, '#30434a');
+  pixel(ctx, bodyX, y + 2, bodyW, bodyH - 3, '#314c58');
+  pixel(ctx, bodyX + 2, y + 4, bodyW - 4, bodyH - 6, '#54727a');
+  pixel(ctx, bodyX + 4, y + 5, 3, bodyH - 8, '#77908b');
+  pixel(ctx, bodyX + bodyW - 5, y + 5, 3, bodyH - 8, '#36535d');
+  pixel(ctx, bodyX + 2, y + 2, bodyW - 4, 3, '#91a29a');
+  pixel(ctx, center + 2, y + 1, 5, 3, '#263c47');
+  pixel(ctx, bodyX - 1, y + 7, bodyW + 2, 3, '#a7694f');
+  pixel(ctx, bodyX, y + bodyH - 8, bodyW, 3, '#a7694f');
+  pixel(ctx, bodyX + 1, y + 8, bodyW - 2, 1, '#d19a65');
+  // A yellow oil label and an irregular leak make the hazard instantly readable.
+  pixel(ctx, center - 5, y + 12, 11, 10, '#edc45e');
+  pixel(ctx, center - 1, y + 13, 2, 3, '#26383e');
+  pixel(ctx, center - 3, y + 16, 6, 4, '#26383e');
+  pixel(ctx, center - 2, y + 20, 4, 1, '#26383e');
+  pixel(ctx, bodyX + bodyW - 5, y + 8, 5, 8, '#182e37');
+  pixel(ctx, bodyX + bodyW - 7, y + 13, 5, 9, '#182e37');
+  pixel(ctx, bodyX + bodyW - 5, y + 20, 3, Math.max(3, h - 23), '#182e37');
+  const dripY = y + 20 + Math.floor((time * 9) % Math.max(3, h - 22));
+  pixel(ctx, bodyX + bodyW - 2, Math.min(y + h - 4, dripY), 2, 3, '#26383e');
+  pixel(ctx, bodyX + 2, y + 14, 2, 4, '#ab7659');
 }
 
-function trash(ctx, x, y, w, h) {
-  pixel(ctx, x, y + h - 6, w, 6, C.oil);
-  pixel(ctx, x + 3, y + h - 9, w - 8, 5, C.oilLight);
-  // A discarded cyan bottle and a crushed can identify beach pollution.
-  pixel(ctx, x + 6, y, 4, 3, '#e59063');
-  pixel(ctx, x + 5, y + 3, 6, 3, '#81c7cd');
-  pixel(ctx, x + 3, y + 6, 10, Math.max(5, h - 8), '#62a5b3');
-  pixel(ctx, x + 5, y + 7, 2, 6, '#bce0da');
-  pixel(ctx, x + 18, y + 5, Math.max(5, w - 23), 11, '#718589');
-  pixel(ctx, x + 17, y + 4, Math.max(7, w - 21), 3, '#b6c2bb');
-  pixel(ctx, x + 19, y + 8, 5, 3, '#e89d7b');
+function trash(ctx, x, y, w, h, variant) {
+  // The five waste silhouettes share an exact 36 × 22 design space.
+  const r = (a, b, c, d, color) => pixel(ctx, x + a * w / 36, y + b * h / 22, c * w / 36, d * h / 22, color);
+  const kind = ((Math.floor(variant) % 5) + 5) % 5;
+  r(1, 19, 34, 3, '#76816b');
+  if (kind === 0) {
+    // Plastic water bottle and a crushed, rusty drinks can.
+    r(6, 0, 4, 3, '#e59063'); r(5, 3, 6, 3, '#9edbd9');
+    r(3, 6, 10, 14, '#62a5b3'); r(5, 7, 2, 10, '#bce0da');
+    r(3, 12, 10, 4, '#e5dcc1'); r(6, 13, 5, 2, '#6c9f92');
+    r(20, 7, 11, 13, '#818c8a'); r(18, 6, 13, 3, '#bdc7bd');
+    r(20, 10, 10, 5, '#d67b5b'); r(24, 10, 2, 4, '#ebbb81');
+    r(20, 18, 11, 2, '#4f686c');
+  } else if (kind === 1) {
+    // A knotted rubbish sack, with a little escaped wrapper beside it.
+    r(15, 1, 5, 3, '#718172'); r(12, 4, 10, 3, '#344b4b');
+    r(10, 7, 16, 3, '#405859'); r(7, 10, 22, 9, '#344b4b');
+    r(10, 19, 17, 2, '#263d42'); r(11, 10, 3, 8, '#5b7470');
+    r(23, 12, 3, 6, '#20363c'); r(14, 5, 7, 2, '#b6ae75');
+    r(29, 16, 6, 4, '#eee0b4'); r(29, 17, 4, 2, '#db9672');
+    r(2, 18, 4, 2, '#b9c4b0');
+  } else if (kind === 2) {
+    // Discarded tire with a clearly open centre and a piece of blue plastic.
+    r(5, 1, 13, 3, '#354149'); r(2, 4, 19, 13, '#354149');
+    r(5, 17, 13, 3, '#354149'); r(0, 8, 23, 6, '#354149');
+    r(7, 6, 9, 9, '#bca979'); r(9, 5, 5, 2, '#bca979');
+    r(3, 5, 3, 10, '#59646a'); r(17, 7, 2, 8, '#1e303a');
+    r(23, 12, 10, 7, '#73b6c0'); r(27, 9, 5, 4, '#9bd6d6');
+    r(24, 16, 11, 4, '#4f8d9f'); r(25, 13, 2, 5, '#c0e4d9');
+  } else if (kind === 3) {
+    // Takeaway carton and a drink cup, all edged so they stand out from sand.
+    r(1, 10, 21, 11, '#92a29a'); r(2, 10, 19, 8, '#ecedcf');
+    r(2, 18, 19, 2, '#bdc9b7'); r(5, 8, 14, 3, '#fff1cf');
+    r(2, 12, 19, 2, '#718e87'); r(23, 5, 11, 3, '#a8b3a5');
+    r(24, 8, 9, 12, '#e6deb5'); r(26, 11, 6, 5, '#d38169');
+    r(28, 0, 2, 6, '#cb775c'); r(28, 0, 5, 2, '#cb775c');
+    r(24, 18, 9, 2, '#879f97');
+  } else {
+    // Abandoned fishing net, buoy and bottle; holes reveal the beach below.
+    r(2, 7, 25, 2, '#597269'); r(0, 16, 31, 2, '#597269');
+    r(3, 20, 26, 2, '#597269');
+    for (let i = 3; i < 29; i += 6) {
+      r(i, 8, 2, 12, '#4e746d'); r(i + 2, 11, 4, 2, '#78978a');
+    }
+    r(7, 2, 6, 6, '#e89169'); r(5, 4, 10, 2, '#e89169');
+    r(8, 3, 3, 2, '#ffd29a'); r(28, 4, 4, 3, '#ce8563');
+    r(27, 7, 6, 3, '#aac9bd'); r(25, 10, 10, 10, '#8db4ae');
+    r(27, 12, 2, 7, '#c5ded0');
+  }
 }
 
-function plane(ctx, x, y, w, h) {
-  // The nose points left. Exhaust trails behind and is scenery, not a hitbox.
-  pixel(ctx, x + w + 3, y + 11, 8, 5, '#87948a');
-  pixel(ctx, x + w + 15, y + 8, 12, 8, '#a1aaa0');
-  pixel(ctx, x + w + 32, y + 11, 14, 9, '#b3b9a8');
+function plane(ctx, x, y, w, h, time) {
+  // Exhaust follows the plane to the right. It is purely visual, never a hitbox.
+  for (let i = 0; i < 4; i++) {
+    const drift = (time * 17 + i * 13) % 17;
+    const puffX = x + w + i * 18 + drift;
+    const puffY = y + 12 + Math.round(Math.sin(time * 2.6 + i) * 3);
+    const size = 6 + i * 3;
+    const shade = ['#42535a', '#68736b', '#8a9080', '#a5a78d'][i];
+    pixel(ctx, puffX + 2, puffY - 2, size - 3, 2, shade);
+    pixel(ctx, puffX, puffY, size + 1, size - 2, shade);
+    pixel(ctx, puffX + 3, puffY + size - 2, size - 3, 2, shade);
+    if (i < 3) pixel(ctx, puffX + size + 3, puffY + size + 3, 2, 2, '#60706c');
+  }
   pixel(ctx, x + 8, y + 10, w - 12, 9, '#faf0ca');
   pixel(ctx, x + 3, y + 12, w - 9, 5, '#faf0ca');
   pixel(ctx, x, y + 14, 5, 3, '#e7c092');
@@ -280,14 +376,17 @@ function plane(ctx, x, y, w, h) {
   pixel(ctx, x + 27, y + h - 3, 8, 3, C.navy);
   pixel(ctx, x + w - 9, y + 4, 6, 10, C.coral);
   pixel(ctx, x + w - 6, y + 1, 6, 6, C.coral);
+  // Rear engine opening and two small dark oil particles distinguish polluting planes.
+  pixel(ctx, x + w - 7, y + 13, 7, 5, '#30444d');
+  pixel(ctx, x + w - 3, y + 14, 3, 3, '#182e37');
 }
 
-export function drawObstacle(ctx, obstacle) {
-  const {type, x, y, width, height} = obstacle;
+export function drawObstacle(ctx, obstacle, time = 0) {
+  const {type, x, y, width, height, variant = 0} = obstacle;
   ctx.save();
   ctx.imageSmoothingEnabled = false;
-  if (type === 'plane') plane(ctx, x, y, width, height);
-  else if (type === 'trash') trash(ctx, x, y, width, height);
-  else barrel(ctx, x, y, width, height);
+  if (type === 'plane') plane(ctx, x, y, width, height, time);
+  else if (type === 'trash') trash(ctx, x, y, width, height, variant);
+  else barrel(ctx, x, y, width, height, time);
   ctx.restore();
 }

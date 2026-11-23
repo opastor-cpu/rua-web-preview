@@ -71,22 +71,24 @@ Quedan por confirmar los nombres de la coordinación general y de cada comisión
 La vista de prueba solicita a los buscadores que no la indexen. Es pública y accesible mediante el enlace; esta indicación no es un control de acceso.
 
 
-## Minijuego secreto (v5)
+## Minijuego secreto (v6)
 
 En la foto grande de la III Ecoferia, cinco pulsaciones consecutivas (sin más de 1,2 segundos entre ellas) abren «Lucianita y el océano». Las miniaturas de Inicio y Actividades conservan sus enlaces normales. El juego y sus dibujos originales en Canvas se cargan únicamente al descubrir el secreto.
 
 - Inicio: «Ayuda a Lucianita a salvar el océano».
 - Espacio/↑ o tocar la playa para saltar; ↓ o mantener el botón para agacharse. P pausa; Escape cierra.
-- Playa en pixel art, ballenas ocasionales, barriles, residuos, aviones y mensajes alternos de conservación.
-- Carrera infinita con dificultad gradual, récord local y sonidos con opción de silencio.
+- Playa en pixel art, ballenas ocasionales y mensajes alternos de conservación. Lucianita tiene proporciones chibi, ojos brillantes, mejillas, cabello y cuatro fotogramas de carrera.
+- Barriles con fugas de petróleo y charcos, cinco variantes de basura (botellas/latas, bolsas, neumáticos, envases y redes), y aviones con humo animado. El humo es decorativo y no añade colisiones invisibles.
+- Carrera infinita con ocho segundos iniciales a velocidad estable. La velocidad aumenta suavemente de 140 a 250 durante los siguientes 180 segundos y queda limitada; los aviones aparecen desde los 45 segundos. Los huecos y el salto conservan un margen de reacción incluso al máximo.
+- Récord local, efectos y melodía original suave de ocho compases a 104 bpm. «Sonido» silencia ambos; la música sólo suena durante la carrera y se detiene al pausar, perder, cerrar o alcanzar la recompensa.
 - A 1.000 puntos aparece la recompensa: la campaña facilitada por RUA se abre tras 5 segundos. «Seguir jugando» cancela la navegación y permite continuar. Cambiar de pestaña cancela la cuenta atrás.
 - Cerrar, cambiar de pestaña o redimensionar pausa la partida. No hay cuentas, envíos de datos ni marcadores remotos.
 
-Archivos: `ocean-game.js` (interfaz), `ocean-engine.mjs` (física), `ocean-art.js` (dibujos) y `ocean-game.css`.
+Archivos: `ocean-game.js` (interfaz), `ocean-engine.mjs` (física), `ocean-art.js` (dibujos), `ocean-music.mjs` (melodía) y `ocean-game.css`.
 
 Validación reproducible, sin dependencias adicionales:
 
 ```sh
-node --test tests/ocean-engine.test.mjs tests/ocean-ui.test.mjs
+node --test tests/ocean-engine.test.mjs tests/ocean-ui.test.mjs tests/ocean-music.test.mjs
 node scripts/build.mjs
 ```

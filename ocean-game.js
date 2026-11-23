@@ -2,9 +2,9 @@
 const trigger = document.querySelector('[data-ocean-trigger]');
 if (trigger) {
   let count = 0, lastTap = 0, clearSequence;
-  let dialog, canvas, ctx, engine, art, state, loading, frame, lastFrame = 0;
+  let dialog, canvas, ctx, engine, art, musicModule, music, state, loading, frame, lastFrame = 0;
   let rewardHandled = false, rewardTimer, rewardRemaining = 5, beforeReward = 'running';
-  let ambientTime = 0, milestone = 0, audioContext, openEpoch = 0;
+  let ambientTime = 0, milestone = 0, audioContext, effectsGain, openEpoch = 0;
   const CAMPAIGN = 'https://c.org/5d7dsFx5yr';
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const key = 'rua:ocean:best';
@@ -13,13 +13,27 @@ if (trigger) {
   let muted = read('rua:ocean:muted') === '1' || (read('rua:ocean:muted') === null && read('rua:interaction-sound-muted') === '1');
   const $ = selector => dialog.querySelector(selector);
 
-  function sound(kind) {
-    if (muted) return;
+  function ensureAudio() {
     try {
       const Audio = window.AudioContext || window.webkitAudioContext;
-      if (!Audio) return;
+      if (!Audio || muted) return null;
       audioContext ||= new Audio();
+      if (!effectsGain) { effectsGain=audioContext.createGain(); effectsGain.connect(audioContext.destination); }
+      effectsGain.gain.setValueAtTime(1,audioContext.currentTime);
       if (audioContext.state === 'suspended') void audioContext.resume().catch(() => {});
+      return audioContext;
+    } catch { return null; }
+  }
+  function stopMusic() { music?.stop(); }
+  function syncMusic() {
+    if(!dialog?.open||state?.status!=='running'||muted){stopMusic();return;}
+    const audio=ensureAudio();
+    if(!audio||!musicModule)return;
+    try { music ||= musicModule.createOceanMusic(audio); music.start(); } catch { /* Music is optional. */ }
+  }
+  function sound(kind) {
+    if (!ensureAudio()) return;
+    try {
       const notes = {jump:[[680,0,.08],[920,.045,.08]],hit:[[180,0,.12],[110,.08,.13]],point:[[960,0,.05],[1200,.07,.07]],start:[[520,0,.06],[690,.07,.06],[1040,.14,.1]],reward:[[520,0,.1],[660,.12,.1],[790,.24,.1],[1050,.36,.2]]}[kind] || [];
       notes.forEach(([frequency,delay,duration]) => {
         const oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
@@ -28,7 +42,7 @@ if (trigger) {
         oscillator.frequency.setValueAtTime(frequency,t);
         gain.gain.setValueAtTime(0,t);gain.gain.linearRampToValueAtTime(kind==='hit'?.035:.018,t+.008);
         gain.gain.exponentialRampToValueAtTime(.0001,t+duration);
-        oscillator.connect(gain);gain.connect(audioContext.destination);
+        oscillator.connect(gain);gain.connect(effectsGain);
         oscillator.onended=()=>{oscillator.disconnect();gain.disconnect();};
         oscillator.start(t);oscillator.stop(t+duration+.01);
       });
@@ -49,7 +63,9 @@ if (trigger) {
       muted=!muted;save('rua:ocean:muted',muted?'1':'0');
       $('[data-game-mute]').setAttribute('aria-pressed',String(!muted));
       $('[data-game-mute]').textContent=muted?'Sonido: no':'Sonido: sí';
-      if(!muted)sound('point');
+      if(muted)effectsGain?.gain.setValueAtTime(0,audioContext.currentTime);
+      else sound('point');
+      syncMusic();
     });
     $('[data-game-continue]').addEventListener('click',()=>{
       clearTimeout(rewardTimer);rewardTimer=null;
@@ -103,7 +119,7 @@ if (trigger) {
   function start(){
     if(!state)return;clearTimeout(rewardTimer);rewardTimer=null;engine.resetGame(state);engine.startGame(state);
     rewardHandled=false;milestone=0;$('[data-game-reward]').hidden=true;$('[data-game-continue]').hidden=true;$('[data-game-panel]').hidden=true;$('[data-game-pause]').disabled=false;$('[data-game-pause]').textContent='Pausar';
-    releaseDuck();lastFrame=0;canvas.focus({preventScroll:true});sound('start');announce('¡Vamos, Lucianita! Salta los obstáculos y agáchate bajo los aviones.');updateScores();
+    releaseDuck();lastFrame=0;canvas.focus({preventScroll:true});sound('start');syncMusic();announce('¡Vamos, Lucianita! Salta los obstáculos y agáchate bajo los aviones.');updateScores();
   }
   function doJump(){
     if(!state||rewardTimer||(!$('[data-game-reward]').hidden))return;
@@ -113,20 +129,20 @@ if (trigger) {
   }
   function pause(){
     if(!state||state.status!=='running')return;
-    state.status='paused';releaseDuck();panel('TÓMATE UN RESPIRO','El océano te espera','Tu carrera está en pausa. Vuelve cuando quieras.','Continuar');
+    state.status='paused';stopMusic();releaseDuck();panel('TÓMATE UN RESPIRO','El océano te espera','Tu carrera está en pausa. Vuelve cuando quieras.','Continuar');
     $('[data-game-pause]').textContent='Continuar';announce('Juego en pausa.');updateScores();
   }
   function resume(){
     if(!state||state.status!=='paused'||!$('[data-game-reward]').hidden)return;
-    state.status='running';lastFrame=0;$('[data-game-panel]').hidden=true;$('[data-game-pause]').textContent='Pausar';canvas.focus({preventScroll:true});updateScores();
+    state.status='running';lastFrame=0;$('[data-game-panel]').hidden=true;$('[data-game-pause]').textContent='Pausar';canvas.focus({preventScroll:true});syncMusic();updateScores();
   }
   function gameover(){
-    releaseDuck();save(key,state.best);sound('hit');$('[data-game-pause]').disabled=true;
+    stopMusic();releaseDuck();save(key,state.best);sound('hit');$('[data-game-pause]').disabled=true;
     panel('OTRA OLA. OTRA OPORTUNIDAD.','¡Vamos de nuevo!',`Conseguiste ${state.score} puntos. Salta los barriles y residuos; agáchate cuando pase un avión bajo.`,'Volver a correr');
     announce(`Fin de la carrera. ${state.score} puntos. Tu récord es ${state.best}.`);
   }
   function reward(){
-    rewardHandled=true;beforeReward=state.status;state.status='paused';releaseDuck();save(key,state.best);sound('reward');
+    rewardHandled=true;beforeReward=state.status;state.status='paused';stopMusic();releaseDuck();save(key,state.best);sound('reward');
     panel('1.000 PUNTOS · META DESBLOQUEADA','Tu carrera llega más lejos','Abriremos la campaña del Tratado de Altamar en 5 segundos.','');
     $('[data-game-play]').hidden=true;$('[data-game-reward]').hidden=false;$('[data-game-continue]').hidden=false;$('[data-game-pause]').disabled=true;
     $('[data-game-continue]').focus({preventScroll:true});announce('¡Mil puntos! Desbloqueaste la campaña. Puedes visitarla o seguir jugando.');
@@ -152,13 +168,15 @@ if (trigger) {
     if(state.status==='running'&&Math.floor(state.score/100)>milestone){milestone=Math.floor(state.score/100);sound('point');}
     ctx.clearRect(0,0,canvas.width,canvas.height);
     art.drawScene(ctx,{time:ambientTime,distance:state.distance,score:state.score,width:canvas.width,height:360,reducedMotion:reduced.matches});
-    state.obstacles.forEach(obstacle=>art.drawObstacle(ctx,obstacle));
+    state.obstacles.forEach(obstacle=>art.drawObstacle(ctx,obstacle,state.time));
     art.drawRunner(ctx,{...state.player,running:state.status==='running',time:state.time});
     updateScores();frame=requestAnimationFrame(draw);
   }
   function cleanup(){
     openEpoch++;
     cancelAnimationFrame(frame);clearTimeout(rewardTimer);rewardTimer=null;lastFrame=0;
+    music?.dispose();music=null;
+    effectsGain?.gain.setValueAtTime(0,audioContext.currentTime);
     if(state){save(key,state.best);releaseDuck();if(state.status==='running')state.status='paused';}
     document.body.classList.remove('ocean-open');trigger.focus({preventScroll:true});
   }
@@ -168,8 +186,8 @@ if (trigger) {
     const openId=++openEpoch;
     dialog.showModal();document.body.classList.add('ocean-open');
     try{
-      loading ||= Promise.all([import('./ocean-engine.mjs?v=5'),import('./ocean-art.js?v=5')]);
-      [engine,art]=await loading;
+      loading ||= Promise.all([import('./ocean-engine.mjs?v=6'),import('./ocean-art.js?v=6'),import('./ocean-music.mjs?v=6')]);
+      [engine,art,musicModule]=await loading;
       if(!dialog.open||openId!==openEpoch)return;
       if(!ctx)throw new Error('Canvas unavailable');
       state=engine.createGame();state.best=Math.max(0,Math.floor(Number(read(key))||0));rewardHandled=false;

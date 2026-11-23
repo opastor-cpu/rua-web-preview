@@ -7,12 +7,14 @@ import * as realEngine from '../ocean-engine.mjs';
 // Unit harness only: a small event/DOM boundary, deterministic timers, and real game physics.
 // No test switches or globals are added to the shipped application.
 const source = readFileSync(new URL('../ocean-game.js', import.meta.url), 'utf8')
-  .replace("import('./ocean-engine.mjs?v=5')", '__loadEngine()')
-  .replace("import('./ocean-art.js?v=5')", '__loadArt()');
+  .replace(/import\('\.\/ocean-engine\.mjs\?v=\d+'\)/, '__loadEngine()')
+  .replace(/import\('\.\/ocean-art\.js\?v=\d+'\)/, '__loadArt()')
+  .replace(/import\('\.\/ocean-music\.mjs\?v=\d+'\)/, '__loadMusic()');
 
 function harness({storage = new Map(), deferred = false} = {}) {
   let clock = 0, id = 0, state, dialog, engineLoads = 0, resolveEngine;
   const timers = new Map(), frames = new Map(), navigation = [];
+  const music = {playing:false, starts:0, stops:0, disposals:0};
   class Node {
     constructor(tag = 'div', name = '') {
       this.tagName = tag; this.name = name; this.listeners = {}; this.attributes = {};
@@ -61,6 +63,11 @@ function harness({storage = new Map(), deferred = false} = {}) {
   document.createElement = tag => { dialog = new Node(tag); return dialog; };
   document.body = new Node('body'); document.body.append = () => {};
   const window = new Node('window'); window.innerWidth = 390;
+  window.AudioContext = class {
+    currentTime = 0; state = 'running'; destination = {};
+    createGain() { return {gain:{setValueAtTime(){},linearRampToValueAtTime(){},exponentialRampToValueAtTime(){}},connect(){},disconnect(){}}; }
+    createOscillator() { return {frequency:{setValueAtTime(){}},connect(){},disconnect(){},start(){},stop(){}}; }
+  };
   window.location = {assign: url => navigation.push(url)};
   const engine = {...realEngine, createGame(...args) { engineLoads++; state = realEngine.createGame(...args); return state; }};
   const pendingEngine = deferred ? new Promise(resolve => { resolveEngine = () => resolve(engine); }) : Promise.resolve(engine);
@@ -73,7 +80,12 @@ function harness({storage = new Map(), deferred = false} = {}) {
     requestAnimationFrame(fn) { const next = ++id; frames.set(next, fn); return next; },
     cancelAnimationFrame(handle) { frames.delete(handle); },
     __loadEngine: () => pendingEngine,
-    __loadArt: () => Promise.resolve({drawScene() {}, drawRunner() {}, drawObstacle() {}})
+    __loadArt: () => Promise.resolve({drawScene() {}, drawRunner() {}, drawObstacle() {}}),
+    __loadMusic: () => Promise.resolve({createOceanMusic: () => ({
+      start(){music.playing=true;music.starts++;},
+      stop(){music.playing=false;music.stops++;},
+      dispose(){music.playing=false;music.disposals++;}
+    })})
   });
   vm.runInContext(source, context, {filename: 'ocean-game.js'});
   function advance(ms) {
@@ -93,7 +105,7 @@ function harness({storage = new Map(), deferred = false} = {}) {
     const current = [...frames.values()]; frames.clear();
     for (const draw of current) draw(clock);
   }
-  return {click, advance, unlock, flush, frame, document, window, trigger, storage, navigation,
+  return {click, advance, unlock, flush, frame, document, window, trigger, storage, navigation, music,
     get dialog() { return dialog; }, get state() { return state; }, get engineLoads() { return engineLoads; },
     get frames() { return frames; }, resolveEngine: () => resolveEngine(),
     node: selector => dialog.querySelector(selector)};
@@ -182,4 +194,41 @@ test('closing and reopening during module loading creates only one game/RAF loop
   ui.resolveEngine(); await ui.flush();
   assert.equal(ui.engineLoads, 1);
   assert.equal(ui.frames.size, 1);
+});
+
+test('music plays only during a running, audible game and cleans up on close', async () => {
+  const ui = harness(); await ui.unlock();
+  assert.equal(ui.music.starts, 0);
+  ui.click(ui.node('[data-game-play]'));
+  assert.equal(ui.music.playing, true);
+  ui.click(ui.node('[data-game-pause]'));
+  assert.equal(ui.music.playing, false);
+  ui.click(ui.node('[data-game-play]'));
+  assert.equal(ui.music.playing, true);
+  ui.click(ui.node('[data-game-mute]'));
+  assert.equal(ui.music.playing, false);
+  ui.click(ui.node('[data-game-mute]'));
+  assert.equal(ui.music.playing, true);
+  ui.window.fire('blur');
+  assert.equal(ui.music.playing, false);
+  ui.click(ui.node('[data-game-play]'));
+  ui.click(ui.node('[data-game-close]'));
+  assert.equal(ui.music.playing, false);
+  assert.equal(ui.music.disposals, 1);
+});
+
+test('collision and reward stop music; a saved mute never starts it', async () => {
+  const ui = harness(); await ui.unlock(); ui.click(ui.node('[data-game-play]'));
+  ui.state.obstacles.push({type:'barrel',x:ui.state.player.x,y:260,width:30,height:34});
+  ui.frame();ui.frame();
+  assert.equal(ui.state.status, 'gameover');
+  assert.equal(ui.music.playing, false);
+  ui.click(ui.node('[data-game-play]'));
+  ui.state.rewardEarned=true;ui.frame();
+  assert.equal(ui.music.playing, false);
+  ui.click(ui.node('[data-game-continue]'));
+  assert.equal(ui.music.playing, true);
+  const muted = harness({storage:new Map([['rua:ocean:muted','1']])});
+  await muted.unlock();muted.click(muted.node('[data-game-play]'));
+  assert.equal(muted.music.starts, 0);
 });
