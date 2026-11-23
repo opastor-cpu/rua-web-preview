@@ -1,0 +1,15 @@
+RUA PERÚ · NODO UNSA AREQUIPA — REDISEÑO WEB
+
+Este paquete está listo para GitHub Pages. Copia su contenido en la raíz del repositorio RUA. index.html debe quedar en la raíz, junto a styles.css, app.js y assets/.
+
+Páginas: index.html (Inicio), nosotros.html (Nosotros), actividades.html (Nuestra acción), participa.html (Participa), creditos.html (Fuentes y créditos).
+
+No requiere instalación ni compilación. Puedes editar los textos directamente en los archivos HTML y los estilos en styles.css. Para sustituir fotografías, cambia su archivo en assets/ y ajusta el texto alternativo y los créditos en las páginas que la usan.
+
+Las fotografías actuales son paisajes de contexto con licencias indicadas en creditos.html. Las actividades provienen de publicaciones de la UNSA, enlazadas en las tarjetas. No hay nombres de integrantes, cifras de impacto ni cuentas de donación ficticias.
+
+El asistente de mensajes no guarda datos ni envía mensajes: prepara el texto, permite copiarlo y abre el canal oficial de WhatsApp. El visitante envía el mensaje por su cuenta.
+
+Pendiente de completar con RUA: fotografías propias, información del equipo, convocatorias vigentes y datos de apoyo o donación confirmados.
+
+Diseño probado en navegador entre 320 y 1440 px. Se revisaron menú móvil, navegación, filtros, preguntas frecuentes y preparación/copia de mensajes.
