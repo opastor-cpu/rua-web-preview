@@ -29,10 +29,10 @@ function gull(ctx, x, y, flap) {
   pixel(ctx, x + 11, y + lift, 7, 2, C.teal);
 }
 
-function whale(ctx, x, surfaceY, progress, reducedMotion) {
+function whale(ctx, x, surfaceY, progress, reducedMotion, talking = false) {
   const rise = reducedMotion ? 1 : Math.sin(progress * Math.PI);
   if (rise <= 0) return;
-  const y = Math.round(surfaceY + 20 - 32 * rise);
+  const y = Math.round(surfaceY + 20 - 46 * rise);
   ctx.save();
   ctx.beginPath();
   ctx.rect(x - 15, surfaceY - 60, 150, 65);
@@ -55,7 +55,7 @@ function whale(ctx, x, surfaceY, progress, reducedMotion) {
   pixel(ctx, x + 12, y + 12, 3, 3, C.cloud);
   pixel(ctx, x + 13, y + 13, 2, 2, C.ink);
   // Short spray when the whale surfaces; it never reaches the playing lane.
-  if (progress > .24 && progress < .68) {
+  if (!talking && progress > .24 && progress < .68) {
     pixel(ctx, x + 23, y - 19, 3, 15, C.foam);
     pixel(ctx, x + 15, y - 24, 9, 3, C.foam);
     pixel(ctx, x + 27, y - 23, 8, 3, C.foam);
@@ -65,6 +65,49 @@ function whale(ctx, x, surfaceY, progress, reducedMotion) {
   ctx.restore();
   pixel(ctx, x - 6, surfaceY + 3, 30, 3, C.foam);
   pixel(ctx, x + 58, surfaceY + 5, 40, 3, C.foam);
+}
+
+function whaleDialogue(ctx, {whaleX, surfaceY, progress, appearance, width, reducedMotion}) {
+  const isTreaty = appearance % 2 === 1;
+  const message = isTreaty ? 'TRATADO DE ALTAMAR' : '¡SALVEMOS EL OCÉANO!';
+  ctx.font = 'bold 16px ui-monospace, "Courier New", monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  const padding = 26;
+  const availableWidth = Math.max(124, Math.min(242, width - 28));
+  const split = width <= 360 || ctx.measureText(message).width + padding > availableWidth;
+  const lines = split
+    ? isTreaty ? ['TRATADO DE', 'ALTAMAR'] : ['¡SALVEMOS EL', 'OCÉANO!']
+    : [message];
+  const bubbleWidth = Math.ceil(Math.max(...lines.map(line => ctx.measureText(line).width))) + padding;
+  const bubbleHeight = lines.length === 2 ? 54 : 36;
+  const rise = reducedMotion ? 1 : Math.sin(progress * Math.PI);
+  const headY = Math.round(surfaceY + 20 - 46 * rise);
+  // The tail finishes beside the whale's forehead, never in the runner's lane.
+  const bubbleBottom = Math.min(surfaceY - 30, headY - 18);
+  const bubbleY = bubbleBottom - bubbleHeight;
+  const bubbleX = Math.round(Math.max(12, Math.min(width - bubbleWidth - 12, whaleX + 30 - bubbleWidth / 2)));
+  const tailX = Math.round(Math.max(bubbleX + 16, Math.min(bubbleX + bubbleWidth - 16, whaleX + 22)));
+  const cream = '#fff8df';
+  const outline = C.navy;
+  // Stepped corners and a little offset shadow keep the speech balloon pixel art.
+  pixel(ctx, bubbleX + 5, bubbleY + 3, bubbleWidth - 6, bubbleHeight + 2, '#4297a5');
+  pixel(ctx, bubbleX + 4, bubbleY, bubbleWidth - 8, bubbleHeight, outline);
+  pixel(ctx, bubbleX, bubbleY + 4, bubbleWidth, bubbleHeight - 8, outline);
+  pixel(ctx, bubbleX + 5, bubbleY + 3, bubbleWidth - 10, bubbleHeight - 6, cream);
+  pixel(ctx, bubbleX + 3, bubbleY + 6, bubbleWidth - 6, bubbleHeight - 12, cream);
+  // The stair-step tail bends left toward the head, away from the right-hand tail fin.
+  pixel(ctx, tailX - 3, bubbleBottom - 3, 10, 7, outline);
+  pixel(ctx, tailX - 5, bubbleBottom + 4, 8, 4, outline);
+  pixel(ctx, tailX - 7, bubbleBottom + 8, 6, 4, outline);
+  pixel(ctx, tailX - 9, bubbleBottom + 12, 4, 4, outline);
+  pixel(ctx, tailX - 1, bubbleBottom - 3, 5, 7, cream);
+  pixel(ctx, tailX - 3, bubbleBottom + 4, 4, 4, cream);
+  pixel(ctx, tailX - 5, bubbleBottom + 8, 2, 3, cream);
+  ctx.fillStyle = outline;
+  const centerX = Math.round(bubbleX + bubbleWidth / 2);
+  const firstLineY = bubbleY + bubbleHeight / 2 - (lines.length - 1) * 10;
+  lines.forEach((line, index) => ctx.fillText(line, centerX, Math.round(firstLineY + index * 20)));
 }
 
 export function drawScene(ctx, {time = 0, distance = 0, score = 0, width = 800, height = 360, reducedMotion = false} = {}) {
@@ -104,25 +147,23 @@ export function drawScene(ctx, {time = 0, distance = 0, score = 0, width = 800, 
     }
   }
 
+  // Every 23s a whale surfaces for 7s; each appearance keeps one consistent line.
+  // Speech waits until the head is visible and disappears before it submerges.
   const cycle = (visualTime + 7) % 23;
   if (reducedMotion || cycle >= 5 && cycle <= 12) {
-    whale(ctx, width * .63, shoreline - 38, reducedMotion ? .5 : (cycle - 5) / 7, reducedMotion);
+    const progress = reducedMotion ? .5 : (cycle - 5) / 7;
+    const talking = reducedMotion || progress >= .22 && progress <= .78;
+    const whaleX = Math.round(Math.max(8, Math.min(width * .63, width - 122)));
+    const surfaceY = shoreline - 38;
+    whale(ctx, whaleX, surfaceY, progress, reducedMotion, talking);
+    if (talking) {
+      whaleDialogue(ctx, {
+        whaleX, surfaceY, progress,
+        appearance: reducedMotion ? 0 : Math.floor((visualTime + 7) / 23),
+        width, reducedMotion,
+      });
+    }
   }
-
-  // Two alternating messages in the sky, kept away from the obstacles and score.
-  const message = Math.floor(time / 15) % 2 ? 'HIGH SEAS TREATY' : 'SALVEMOS EL OCÉANO';
-  ctx.font = 'bold 14px ui-monospace, "Courier New", monospace';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  const messageWidth = Math.ceil(ctx.measureText(message).width) + 40;
-  const messageX = Math.round(width * .43 - messageWidth / 2);
-  pixel(ctx, messageX + 5, 85, messageWidth - 10, 29, '#f7f8e6');
-  pixel(ctx, messageX, 90, messageWidth, 19, '#f7f8e6');
-  pixel(ctx, messageX + 8, 114, messageWidth - 16, 3, '#abd8d8');
-  ctx.fillStyle = C.navy;
-  ctx.fillText(message, Math.round(width * .43), 101);
-  pixel(ctx, messageX + 9, 98, 4, 4, C.coral);
-  pixel(ctx, messageX + messageWidth - 13, 98, 4, 4, C.coral);
 
   pixel(ctx, 0, shoreline, width, height - shoreline, C.sand);
   const foamOffset = Math.round(Math.sin(visualTime * 1.2) * 3);

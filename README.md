@@ -71,13 +71,13 @@ Quedan por confirmar los nombres de la coordinación general y de cada comisión
 La vista de prueba solicita a los buscadores que no la indexen. Es pública y accesible mediante el enlace; esta indicación no es un control de acceso.
 
 
-## Minijuego secreto (v7)
+## Minijuego secreto (v8)
 
 En la foto grande de la III Ecoferia, cinco pulsaciones consecutivas (sin más de 1,2 segundos entre ellas) abren «Lucianita y el océano». Las miniaturas de Inicio y Actividades conservan sus enlaces normales. El juego y sus dibujos originales en Canvas se cargan únicamente al descubrir el secreto.
 
 - Inicio: «Ayuda a Lucianita a salvar el océano».
 - Espacio/↑ o tocar la playa para saltar; ↓ o mantener el botón para agacharse. P pausa; Escape cierra.
-- Playa en pixel art, ballenas ocasionales y mensajes alternos de conservación. Lucianita tiene proporciones chibi, ojos brillantes, mejillas, cabello y cuatro fotogramas de carrera.
+- Playa en pixel art y ballenas que, al salir del mar, alternan «¡Salvemos el océano!» y «Tratado de Altamar» en burbujas de diálogo. Los mensajes acompañan a la ballena y desaparecen cuando se sumerge. Lucianita tiene proporciones chibi, ojos brillantes, mejillas, cabello y cuatro fotogramas de carrera.
 - Barriles con fugas de petróleo y charcos, cinco variantes de basura (botellas/latas, bolsas, neumáticos, envases y redes), y aviones con humo animado. El humo es decorativo y no añade colisiones invisibles.
 - Carrera infinita con cinco segundos iniciales a velocidad estable. La velocidad aumenta suavemente de 165 a 300 durante los siguientes 110 segundos y queda limitada; los aviones aparecen desde los 25 segundos. Los obstáculos aparecen más seguido, conservando espacio para aterrizar y reaccionar.
 - Récord local, efectos y melodía original de ocho compases a 136 bpm, con bajo y percusión ligera para acompañar una carrera más dinámica. «Sonido» silencia ambos; la música sólo suena durante la carrera y se detiene al pausar, perder, cerrar o alcanzar la recompensa.
