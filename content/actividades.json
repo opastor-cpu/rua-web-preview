@@ -11,24 +11,7 @@
       "summary": "RUA Perú Nodo UNSA participó en la feria por la Hora del Planeta con mensajes y dinámicas para promover hábitos de cuidado ambiental junto a organizaciones y vecinos de Miraflores.",
       "source": "https://www.munimiraflores-arequipa.gob.pe/2025/03/24/exitosa-feria-ambiental-apaga-y-actua-por-la-hora-del-planeta/",
       "publisher": "Municipalidad Distrital de Miraflores – Arequipa",
-      "images": [
-        {
-          "filename": "assets/rua-hora-planeta-2025.jpg",
-          "dimensions": {
-            "width": 2048,
-            "height": 1367
-          },
-          "credit": "Municipalidad Distrital de Miraflores – Arequipa",
-          "alt": "Voluntario de RUA comparte materiales de educación ambiental en la feria Apaga y Actúa de Miraflores.",
-          "context": "Educación ambiental y conversación con visitantes en el stand de RUA.",
-          "webp": {
-            "filename": "assets/rua-hora-planeta-2025.webp",
-            "width": 1600,
-            "height": 1068,
-            "bytes": 176774
-          }
-        }
-      ]
+      "images": []
     },
     {
       "id": "eco-innova-2025",
@@ -203,34 +186,7 @@
       "summary": "Los nodos UNSA y UCSM de RUA participaron en la campaña Hunter Sostenible durante el Corso de la Amistad, junto a organizaciones y programas ambientales. La jornada promovió la conciencia ambiental y la recuperación de residuos.",
       "source": "https://www.gob.pe/institucion/munijacobohunter/noticias/777235-primera-campana-de-sensibilizacion-ambiental-hunter-sostenible-en-el-corso-de-la-amistad-2023",
       "publisher": "Municipalidad Distrital Jacobo Hunter",
-      "images": [
-        {
-          "filename": "assets/rua-hunter-sostenible.jpg",
-          "dimensions": {
-            "width": 2048,
-            "height": 1538
-          },
-          "credit": "Municipalidad Distrital Jacobo Hunter",
-          "alt": "Participantes de la campaña ambiental Hunter Sostenible durante el Corso de la Amistad de 2023.",
-          "context": "Participantes de la campaña municipal Hunter Sostenible durante el Corso de la Amistad.",
-          "webp": {
-            "filename": "assets/rua-hunter-sostenible.webp",
-            "width": 1600,
-            "height": 1202,
-            "bytes": 341614
-          }
-        },
-        {
-          "filename": "assets/rua-v3-hunter-accion-3.webp",
-          "dimensions": {
-            "width": 1600,
-            "height": 1202
-          },
-          "credit": "Municipalidad Distrital Jacobo Hunter",
-          "alt": "Participante de Hunter Sostenible recoge residuos entre el público del corso.",
-          "context": "Sensibilización y recolección de residuos entre los asistentes al Corso de la Amistad."
-        }
-      ]
+      "images": []
     }
   ]
 }

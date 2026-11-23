@@ -1,0 +1,31 @@
+{
+  "programs": [
+    {
+      "id": "greenclub",
+      "title": "GreenClub",
+      "summary": "Iniciativa de voluntariado de RUA Perú – Nodo UNSA, documentada en el registro de postulaciones admitidas de RENAVOL 2024.",
+      "date": "2024",
+      "date_precision": "year",
+      "source": "https://cdn.www.gob.pe/uploads/document/file/7198578/5652684-relacion-de-postulaciones-admitidas.pdf?v=1731113265",
+      "publisher": "Ministerio de la Mujer y Poblaciones Vulnerables – RENAVOL"
+    },
+    {
+      "id": "rua-emprende",
+      "title": "RUA Emprende",
+      "summary": "Programa mencionado entre los objetivos de fortalecimiento del nodo durante su aniversario de 2025.",
+      "date": "2025-05",
+      "date_precision": "month",
+      "source": "https://radiouniversidadaqp.blogspot.com/2025/05/titulo-la-red-universitaria-ambiental.html",
+      "publisher": "Radio Universidad – UNSA"
+    },
+    {
+      "id": "rua-pet",
+      "title": "RUA Pet",
+      "summary": "Iniciativa vinculada al apoyo a refugios de animales, mencionada entre los objetivos del nodo en mayo de 2025.",
+      "date": "2025-05",
+      "date_precision": "month",
+      "source": "https://radiouniversidadaqp.blogspot.com/2025/05/titulo-la-red-universitaria-ambiental.html",
+      "publisher": "Radio Universidad – UNSA"
+    }
+  ]
+}

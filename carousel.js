@@ -1,26 +1,38 @@
-// Carousels run only while visible. Each has independent, accessible controls.
+// Independent galleries: stagger the first visible cycle, then advance every 5s.
 document.querySelectorAll('[data-carousel]').forEach(root => {
-  const slides = [...root.querySelectorAll('.carousel-slide')];
+  const stage = root.querySelector(':scope > .carousel-stage') || root.querySelector('.carousel-stage');
+  const slides = stage ? [...stage.children].filter(slide => slide.classList.contains('carousel-slide')) : [];
   if (!slides.length) return;
-  const dots = [...root.querySelectorAll('[data-slide]')];
-  const pause = root.querySelector('[data-pause]');
-  const stage = root.querySelector('.carousel-stage');
+  const status = root.querySelector('.carousel-status');
+  const caption = root.querySelector('[data-photo-caption]');
   const mobile = matchMedia('(max-width: 620px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const requestedInterval = Number(root.dataset.interval);
+  const interval = Number.isFinite(requestedInterval) && requestedInterval >= 1000 ? requestedInterval : 5000;
+  const requestedDelay = Number(root.dataset.startDelay);
+  const startDelay = Number.isFinite(requestedDelay) ? Math.max(0, requestedDelay) : 0;
   let index = 0, timer, inView = false, hovered = false, focused = false;
-  let userPaused = reduced.matches, pointerStart, suppressClickUntil = 0;
+  let userPaused = reduced.matches, firstCycle = true, pointerStart, suppressClickUntil = 0;
   const enabled = () => !root.hasAttribute('data-only-mobile') || mobile.matches;
-  const label = root.dataset.carousel;
   const canPlay = () => enabled() && slides.length > 1 && inView && !document.hidden && !userPaused && !hovered && !focused;
 
   function schedule() {
     clearTimeout(timer);
+    timer = undefined;
     const playing = canPlay();
     root.dataset.playing = String(playing);
-    if (playing) timer = setTimeout(() => show(index + 1), Number(root.dataset.interval) || 7000);
+    root.dataset.paused = String(userPaused);
+    if (!playing) return;
+    const delay = interval + (firstCycle ? startDelay : 0);
+    firstCycle = false;
+    timer = setTimeout(() => {
+      timer = undefined;
+      if (canPlay()) show(index + 1);
+      else schedule();
+    }, delay);
   }
   function show(next, manual = false) {
-    index = (next + slides.length) % slides.length;
+    index = ((next % slides.length) + slides.length) % slides.length;
     const active = enabled();
     slides.forEach((slide, i) => {
       const visible = !active || i === index;
@@ -28,48 +40,54 @@ document.querySelectorAll('[data-carousel]').forEach(root => {
       slide.setAttribute('aria-hidden', String(!visible));
       slide.inert = !visible;
     });
-    dots.forEach((dot, i) => {
-      dot.setAttribute('aria-pressed', String(i === index));
-      dot.classList.toggle('is-active', i === index);
-    });
-    const count = root.querySelector('.carousel-count');
-    if (count) count.textContent = `${index + 1} / ${slides.length}`;
     root.dataset.activeSlide = String(index + 1);
-    const caption = root.querySelector('[data-photo-caption]');
-    if (caption) caption.textContent = slides[index].querySelector('figcaption').textContent.trim();
+    if (caption) caption.textContent = slides[index].querySelector('figcaption')?.textContent.trim() || '';
     if (manual) {
+      // User navigation starts a fresh, ordinary cycle; never reapply staggering.
+      firstCycle = false;
       const title = slides[index].querySelector('h3, figcaption')?.textContent.trim() || '';
-      root.querySelector('.carousel-status').textContent = `${index + 1} de ${slides.length}. ${title}`;
+      if (status) status.textContent = `${index + 1} de ${slides.length}. ${title}`;
     }
     schedule();
   }
-  function updatePause() {
-    pause?.setAttribute('aria-pressed', String(userPaused));
-    pause?.setAttribute('aria-label', `${userPaused ? 'Reanudar' : 'Pausar'} ${label}`);
-    pause?.classList.toggle('is-paused', userPaused);
+  function togglePause() {
+    userPaused = !userPaused;
+    if (status) status.textContent = userPaused
+      ? 'Reproducción automática en pausa.'
+      : 'Reproducción automática activada. Continuará al salir del carrusel.';
     schedule();
   }
-  root.querySelector('[data-prev]')?.addEventListener('click', () => show(index - 1, true));
-  root.querySelector('[data-next]')?.addEventListener('click', () => show(index + 1, true));
-  dots.forEach(dot => dot.addEventListener('click', () => show(Number(dot.dataset.slide), true)));
-  pause?.addEventListener('click', () => { userPaused = !userPaused; updatePause(); });
+  root.querySelector('[data-prev]')?.addEventListener('click', () => { if (enabled()) show(index - 1, true); });
+  root.querySelector('[data-next]')?.addEventListener('click', () => { if (enabled()) show(index + 1, true); });
   root.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse') { hovered = true; schedule(); } });
   root.addEventListener('pointerleave', event => { if (event.pointerType === 'mouse') { hovered = false; schedule(); } });
   root.addEventListener('focusin', () => { focused = true; schedule(); });
   root.addEventListener('focusout', event => { focused = root.contains(event.relatedTarget); schedule(); });
   root.addEventListener('keydown', event => {
-    if (!enabled() || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    if (!enabled() || event.altKey || event.ctrlKey || event.metaKey || event.defaultPrevented) return;
+    if (event.target.closest('[data-carousel]') !== root) return;
+    if (event.target.closest('input, textarea, select, [contenteditable]:not([contenteditable="false"])')) return;
+    if (event.key === ' ' || event.key === 'Spacebar') {
+      // Space on a button/link keeps its native action; Space on the region pauses.
+      if (event.target.closest('button, a, [role="button"]')) return;
+      event.preventDefault();
+      if (!event.repeat) togglePause();
+      return;
+    }
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
     event.preventDefault();
     show(index + (event.key === 'ArrowLeft' ? -1 : 1), true);
   });
   stage?.addEventListener('pointerdown', event => {
-    if (event.pointerType !== 'mouse' && enabled()) pointerStart = {x:event.clientX,y:event.clientY};
+    if (event.pointerType !== 'mouse' && event.isPrimary !== false && enabled()) {
+      pointerStart = {x:event.clientX,y:event.clientY,id:event.pointerId};
+    }
   });
   stage?.addEventListener('pointerup', event => {
-    if (!pointerStart) return;
+    if (!pointerStart || pointerStart.id !== event.pointerId) return;
     const dx = event.clientX - pointerStart.x, dy = event.clientY - pointerStart.y;
     pointerStart = null;
-    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+    if (enabled() && Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.3) {
       suppressClickUntil = Date.now() + 400;
       show(index + (dx < 0 ? 1 : -1), true);
     }
@@ -80,10 +98,21 @@ document.querySelectorAll('[data-carousel]').forEach(root => {
   }, true);
   root.querySelectorAll('img').forEach(img => { img.draggable = false; });
   mobile.addEventListener('change', () => show(index));
-  reduced.addEventListener('change', event => { if (event.matches) userPaused = true; updatePause(); });
+  reduced.addEventListener('change', event => {
+    if (event.matches) userPaused = true;
+    schedule();
+  });
   document.addEventListener('visibilitychange', schedule);
-  new IntersectionObserver(entries => { inView = entries[0].isIntersecting; schedule(); }, {threshold:.2}).observe(root);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      const visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .2;
+      // Repeated intersection reports must not reset the gallery's own timer.
+      if (visible !== inView) { inView = visible; schedule(); }
+    }, {threshold:[0,.2]}).observe(root);
+  } else {
+    // Manual navigation remains available if visibility cannot be observed.
+    inView = false;
+  }
   root.classList.add('carousel-ready');
   show(0);
-  updatePause();
 });

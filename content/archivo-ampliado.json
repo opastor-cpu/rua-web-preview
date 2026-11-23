@@ -1,0 +1,329 @@
+{
+  "activities": [
+    {
+      "id": "ecoferia-yaravi-2026",
+      "title": "III Ecoferia: una mirada al cuidado del mar",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "summary": "RUA participó en la III Ecoferia de Radio Yaraví y Amakella con una actividad de sensibilización sobre el Tratado de Alta Mar y la protección de los ecosistemas marinos.",
+      "date": "2026-11-15",
+      "date_label": "15 de noviembre de 2026",
+      "date_precision": "day",
+      "place": "Arequipa",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0KWs92L73ocvD9EpchWkQGrDtgoDAvspC3t1rZtZHfdRhkF4GtsLKX6eyokE1YzuEl",
+      "publisher": "RUA Perú Nodo UNSA · Publicación compartida de Radio Yaraví",
+      "secondary_sources": [
+        {
+          "url": "https://www.facebook.com/YaraviArequipa/posts/pfbid037Dq9BuHHTVWNyXnnNrBpLiEbCCemD7V3jQgC1T4RoDssJAa5PTkMxszUirw26mw3l",
+          "publisher": "Radio Yaraví – publicación original"
+        }
+      ],
+      "images": [
+        {
+          "filename": "assets/rua-v4-ecoferia-02.webp",
+          "dimensions": {
+            "width": 1600,
+            "height": 1066
+          },
+          "credit": "Radio Yaraví Arequipa · compartida por RUA UNSA",
+          "alt": "Voluntaria con polo de RUA comparte información del Tratado de Alta Mar en la tercera Ecoferia.",
+          "context": "Voluntariado y educación ambiental en la III Ecoferia."
+        },
+        {
+          "filename": "assets/rua-v4-ecoferia-01.webp",
+          "dimensions": {
+            "width": 1600,
+            "height": 1066
+          },
+          "credit": "Radio Yaraví Arequipa · compartida por RUA UNSA",
+          "alt": "Material de sensibilización de RUA sobre la protección de los ecosistemas marinos.",
+          "context": "Mensajes para el cuidado de los ecosistemas marinos."
+        }
+      ]
+    },
+    {
+      "id": "hilando-verde-2025",
+      "title": "Reforestación en la Asociación 28 de Julio",
+      "category": "Restauración y comunidad",
+      "summary": "RUA participó en una jornada de Hilando Verde en Cerro Colorado, junto a Michell, instituciones públicas y otras organizaciones.",
+      "date": "2025-11-29",
+      "date_precision": "day",
+      "place": "Asociación 28 de Julio, Cerro Colorado, Arequipa",
+      "source": "https://es.linkedin.com/posts/michell-alpaca_hilandoverde-activity-7401665797250777088-U7-d",
+      "publisher": "MICHELL Y CIA. S.A.",
+      "date_label": "29 de noviembre de 2025",
+      "filter": "territorio",
+      "images": [
+        {
+          "filename": "assets/rua-v4-michell-01.webp",
+          "dimensions": {
+            "width": 800,
+            "height": 500
+          },
+          "credit": "MICHELL Y CIA. S.A. · Hilando Verde",
+          "alt": "Participantes de Hilando Verde junto a los banners de RUA y las organizaciones aliadas en Cerro Colorado.",
+          "context": "Una jornada compartida por más áreas verdes en Cerro Colorado."
+        },
+        {
+          "filename": "assets/rua-v4-michell-02.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1350
+          },
+          "credit": "MICHELL Y CIA. S.A. · Hilando Verde",
+          "alt": "Plantones y materiales preparados para la jornada de reforestación Hilando Verde.",
+          "context": "Preparación de plantones y materiales para la reforestación."
+        },
+        {
+          "filename": "assets/rua-v4-michell-03.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1350
+          },
+          "credit": "MICHELL Y CIA. S.A. · Hilando Verde",
+          "alt": "Una participante coloca un plantón en el terreno durante Hilando Verde 2025.",
+          "context": "Cada plantón es un nuevo compromiso con su cuidado."
+        },
+        {
+          "filename": "assets/rua-v4-michell-04.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1350
+          },
+          "credit": "MICHELL Y CIA. S.A. · Hilando Verde",
+          "alt": "Entrega de un plantón a una participante durante la jornada Hilando Verde.",
+          "context": "Plantones que pasan de mano en mano para sumar nuevas áreas verdes."
+        },
+        {
+          "filename": "assets/rua-v4-michell-05.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1350
+          },
+          "credit": "MICHELL Y CIA. S.A. · Hilando Verde",
+          "alt": "Participantes organizan y reciben plantones durante Hilando Verde 2025.",
+          "context": "Trabajo compartido para preparar la plantación en la comunidad."
+        }
+      ]
+    },
+    {
+      "id": "aniversario-11-2025",
+      "title": "Once años de comunidad ambiental",
+      "category": "Comunidad RUA",
+      "summary": "El nodo celebró su aniversario con actividades de integración y una sesión solemne, donde compartió sus objetivos de voluntariado para 2025.",
+      "date": "2025-05",
+      "date_precision": "month",
+      "published_date": "2025-05-19",
+      "place": "Arequipa",
+      "source": "https://radiouniversidadaqp.blogspot.com/2025/05/titulo-la-red-universitaria-ambiental.html",
+      "publisher": "Radio Universidad – UNSA",
+      "date_label": "Mayo de 2025",
+      "filter": "encuentros",
+      "images": []
+    },
+    {
+      "id": "mundo-alpaca-2024",
+      "title": "Visita al espacio Mundo Alpaca",
+      "category": "Aprendizaje y comunidad",
+      "summary": "El nodo visitó Mundo Alpaca en agosto, como parte de las actividades estudiantiles registradas por la UNSA.",
+      "date": "2024-08-03",
+      "date_precision": "day",
+      "place": "Mundo Alpaca, Arequipa",
+      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
+      "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
+      "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
+      "date_label": "3 de agosto de 2024",
+      "filter": "educacion",
+      "images": []
+    },
+    {
+      "id": "aniversario-arequipa-2024",
+      "title": "RUA en el aniversario de Arequipa",
+      "category": "Comunidad RUA",
+      "summary": "RUA se sumó a las celebraciones de la ciudad con participación en el corso, registrada en dos fechas de agosto.",
+      "date": "2024-08-04",
+      "date_precision": "multiple_days",
+      "additional_dates": [
+        "2024-08-15"
+      ],
+      "place": "Arequipa",
+      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
+      "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
+      "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
+      "date_label": "4 y 15 de agosto de 2024",
+      "filter": "encuentros",
+      "images": []
+    },
+    {
+      "id": "rua-noticias-agosto-2024",
+      "title": "Actualidad con RUA Noticias",
+      "category": "Comunicación ambiental",
+      "summary": "Durante agosto, el nodo registró tres entregas de RUA Noticias dentro de su programación de actividades.",
+      "date": "2024-08-09",
+      "date_precision": "multiple_days",
+      "additional_dates": [
+        "2024-08-20",
+        "2024-08-26"
+      ],
+      "place": "Arequipa",
+      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
+      "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
+      "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
+      "date_label": "Agosto de 2024",
+      "filter": "educacion",
+      "images": []
+    },
+    {
+      "id": "aves-urbanas-agosto-2024",
+      "title": "Observación de aves en la ciudad",
+      "category": "Biodiversidad y ciencia ciudadana",
+      "summary": "RUA participó en dos jornadas de monitoreo de aves urbanas, incluidas en el registro universitario de actividades de agosto.",
+      "date": "2024-08-17",
+      "date_precision": "day_range",
+      "end_date": "2024-08-18",
+      "place": "Arequipa",
+      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
+      "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
+      "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
+      "date_label": "17 y 18 de agosto de 2024",
+      "filter": "territorio",
+      "images": []
+    },
+    {
+      "id": "ruito-heroe-2024",
+      "title": "Sé un ruito héroe",
+      "category": "Comunidad RUA",
+      "summary": "Esta jornada del nodo forma parte de las actividades realizadas que la UNSA documentó en su boletín de agosto.",
+      "date": "2024-08-24",
+      "date_precision": "day",
+      "place": "Arequipa",
+      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
+      "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
+      "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
+      "date_label": "24 de agosto de 2024",
+      "filter": "encuentros",
+      "images": []
+    },
+    {
+      "id": "enruate-agosto-2024",
+      "title": "Una nueva convocatoria ENRUATE",
+      "category": "Participación y voluntariado",
+      "summary": "La miniconvocatoria ENRUATE formó parte de la programación de agosto documentada por el nodo ante la universidad.",
+      "date": "2024-08-27",
+      "date_precision": "day",
+      "place": "Arequipa",
+      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
+      "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
+      "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
+      "date_label": "27 de agosto de 2024",
+      "filter": "encuentros",
+      "images": []
+    },
+    {
+      "id": "navidad-honorio-delgado-2023",
+      "title": "Navidad compartida en el Hospital Honorio Delgado",
+      "category": "Solidaridad y comunidad",
+      "summary": "RUA y el Hospital Honorio Delgado organizaron una actividad navideña que contó con una presentación del Teatro Experimental de la UNSA.",
+      "date": "2023",
+      "date_precision": "year",
+      "place": "Hospital Regional Honorio Delgado Espinoza, Arequipa",
+      "source": "https://www.unsa.edu.pe/wp-content/uploads/2022/11/RAU-0005-2024-Memoria-Anual.pdf",
+      "publisher": "Universidad Nacional de San Agustín de Arequipa",
+      "source_location": "Memoria Anual 2023, página impresa 39, apartado Teatro Experimental – TEUNSA",
+      "date_label": "2023",
+      "filter": "encuentros",
+      "images": []
+    },
+    {
+      "id": "forestacion-cerrito-belen-2021",
+      "title": "Más verde para Cerrito Belén",
+      "category": "Restauración y comunidad",
+      "summary": "Los nodos UNSA y UCSM colaboraron con la Municipalidad de Mariano Melgar en una jornada de forestación del sector Cerrito Belén.",
+      "date": "2021-05-22",
+      "date_precision": "day",
+      "place": "Área verde del sector Cerrito Belén, Mariano Melgar, Arequipa",
+      "source": "https://www.muniarequipa.gob.pe/descargas/transparencia/memorias/MEMORIA%20ANUAL%202021.pdf",
+      "publisher": "Municipalidad Provincial de Arequipa",
+      "source_location": "Memoria Anual 2021, Gestión del Cambio Climático, tabla de forestación del año 2021",
+      "date_label": "22 de mayo de 2021",
+      "filter": "territorio",
+      "images": []
+    },
+    {
+      "id": "forestacion-huanca-2021",
+      "title": "Forestación en Señor de Huanca",
+      "category": "Restauración y comunidad",
+      "summary": "RUA UNSA y RUA UCSM participaron junto a la Municipalidad de Mariano Melgar en la recuperación verde de Señor de Huanca.",
+      "date": "2021-04-25",
+      "date_precision": "day",
+      "place": "Área verde Señor de Huanca, Mariano Melgar, Arequipa",
+      "source": "https://www.muniarequipa.gob.pe/descargas/transparencia/memorias/MEMORIA%20ANUAL%202021.pdf",
+      "publisher": "Municipalidad Provincial de Arequipa",
+      "source_location": "Memoria Anual 2021, Gestión del Cambio Climático, tabla de forestación del año 2021",
+      "date_label": "25 de abril de 2021",
+      "filter": "territorio",
+      "images": []
+    },
+    {
+      "id": "reforestacion-areisa",
+      "title": "Colaboración en la segunda reforestación de AREISA",
+      "category": "Restauración y comunidad",
+      "summary": "RUA UNSA apoyó una jornada de recuperación de áreas verdes organizada por AREISA, junto a otros colectivos universitarios y la municipalidad provincial.",
+      "date": null,
+      "date_precision": "unknown",
+      "published_date": "2025-05-04",
+      "place": "Arequipa",
+      "source": "https://es.linkedin.com/posts/areisa_reforestaci%C3%B3n-areisa-medioambiente-activity-7324868676334010369-vBBr",
+      "publisher": "AREISA",
+      "date_label": "Publicado en mayo de 2025",
+      "filter": "territorio",
+      "images": []
+    },
+    {
+      "id": "reforestacion-la-pascana-2023",
+      "title": "Reforestación en La Pascana, Yura",
+      "category": "Restauración y comunidad",
+      "filter": "territorio",
+      "summary": "Voluntarios de RUA participaron en una jornada de plantación en La Pascana, dentro del proyecto de reforestación impulsado por SERFOR y Rotary Club Internacional en Yura.",
+      "date": "2023-06",
+      "date_precision": "month",
+      "date_label": "Junio de 2023",
+      "published_date": "2023-06-06",
+      "place": "La Pascana, Yura, Arequipa",
+      "source": "https://www.gob.pe/institucion/serfor/noticias/773592-arequipa-serfor-y-rotary-club-internacional-inician-proyecto-de-reforestacion-con-primera-plantacion-de-4-mil-arboles",
+      "publisher": "SERFOR – Plataforma del Estado Peruano",
+      "images": [
+        {
+          "filename": "assets/rua-v4-serfor-01.webp",
+          "dimensions": {
+            "width": 1600,
+            "height": 1067
+          },
+          "credit": "SERFOR · Plataforma del Estado Peruano",
+          "alt": "Cuatro voluntarios con polos de RUA y herramientas de plantación en La Pascana, Yura.",
+          "context": "Voluntariado RUA en la jornada de reforestación de La Pascana."
+        },
+        {
+          "filename": "assets/rua-v4-serfor-02.webp",
+          "dimensions": {
+            "width": 1600,
+            "height": 1067
+          },
+          "credit": "SERFOR · Plataforma del Estado Peruano",
+          "alt": "Participantes escuchan una explicación técnica durante la jornada de reforestación en Yura.",
+          "context": "Aprender a plantar y cuidar árboles también forma parte de la jornada."
+        },
+        {
+          "filename": "assets/rua-v4-serfor-03.webp",
+          "dimensions": {
+            "width": 1600,
+            "height": 1067
+          },
+          "credit": "SERFOR · Plataforma del Estado Peruano",
+          "alt": "Voluntarios preparan el terreno para plantar árboles en La Pascana, Yura.",
+          "context": "Trabajo en campo para recuperar y ampliar las áreas verdes de Yura."
+        }
+      ]
+    }
+  ]
+}
