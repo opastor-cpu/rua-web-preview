@@ -149,6 +149,16 @@
             "height": 720,
             "bytes": 281640
           }
+        },
+        {
+          "filename": "assets/rua-v3-chili-accion-4.webp",
+          "dimensions": {
+            "width": 1181,
+            "height": 664
+          },
+          "credit": "UNSA – Oficina Universitaria de Imagen Institucional",
+          "alt": "Participantes con sacos de residuos durante la limpieza del río Chili en julio de 2024.",
+          "context": "Participantes junto a los residuos retirados de la ribera."
         }
       ]
     },
@@ -209,6 +219,16 @@
             "height": 1202,
             "bytes": 341614
           }
+        },
+        {
+          "filename": "assets/rua-v3-hunter-accion-3.webp",
+          "dimensions": {
+            "width": 1600,
+            "height": 1202
+          },
+          "credit": "Municipalidad Distrital Jacobo Hunter",
+          "alt": "Participante de Hunter Sostenible recoge residuos entre el público del corso.",
+          "context": "Sensibilización y recolección de residuos entre los asistentes al Corso de la Amistad."
         }
       ]
     }

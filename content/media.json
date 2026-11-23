@@ -1,0 +1,102 @@
+{
+  "landscapes": [
+    {
+      "filename": "assets/v3-misti-nevado.jpg",
+      "width": 2400,
+      "height": 1603,
+      "srcset": "assets/v3-misti-nevado-1200.webp 1200w, assets/v3-misti-nevado-2400.webp 2400w",
+      "caption": "Misti nevado · Campiña de Arequipa",
+      "alt": "El volcán Misti cubierto de nieve bajo un cielo azul, con campos verdes en primer plano",
+      "source": "https://www.pexels.com/photo/17044647/",
+      "author": "Maria del Rosario Palomino Begazo",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "object_position": "center 52%",
+      "mobile_object_position": "64% 48%"
+    },
+    {
+      "filename": "assets/v3-chili-verde.jpg",
+      "width": 2400,
+      "height": 1350,
+      "srcset": "assets/v3-chili-verde-1200.webp 1200w, assets/v3-chili-verde-2400.webp 2400w",
+      "caption": "Río Chili · Naturaleza en la ciudad",
+      "alt": "El río Chili rodeado de árboles verdes con el volcán Misti al fondo en Arequipa",
+      "source": "https://commons.wikimedia.org/wiki/File:Misti_from_Arequipa.jpg",
+      "author": "Mojnsen",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "object_position": "center center",
+      "mobile_object_position": "65% center"
+    },
+    {
+      "filename": "assets/v3-misti-follaje.jpg",
+      "width": 2400,
+      "height": 1800,
+      "srcset": "assets/v3-misti-follaje-1200.webp 1200w, assets/v3-misti-follaje-2400.webp 2400w",
+      "caption": "Misti nevado · Un paisaje que cuidar",
+      "alt": "La cumbre nevada del Misti enmarcada por follaje verde bajo un cielo despejado",
+      "source": "https://www.pexels.com/photo/23844688/",
+      "author": "Daniel Reynaga",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "object_position": "center 47%",
+      "mobile_object_position": "65% 48%"
+    }
+  ],
+  "sections": {
+    "home": {
+      "filename": "assets/rua-v3-chili-encuentro.webp",
+      "width": 1600,
+      "height": 783,
+      "alt": "Participantes de la jornada ambiental junto al río Chili en Tiabaya, julio de 2024.",
+      "caption": "Encuentro por el río Chili · Julio de 2024",
+      "source": "https://www.unsa.edu.pe/estudiantes-de-la-escuela-profesional-de-trabajo-social-realizaron-limpieza-en-las-riberas-del-rio-chili-en-tiabaya/",
+      "credit": "UNSA – Oficina Universitaria de Imagen Institucional"
+    },
+    "nosotros": {
+      "filename": "assets/rua-v3-educca-aula.webp",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Estudiantes participan en un taller de educación ambiental y reciclaje en Cerro Colorado.",
+      "caption": "Taller EDUCCA en Cerro Colorado · Octubre de 2023",
+      "source": "https://mdcc.gob.pe/%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%9C%F0%9D%90%A2%F0%9D%90%9A%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%AC-%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%A7-%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%A9%F0%9D%90%AB/",
+      "credit": "Municipalidad Distrital de Cerro Colorado"
+    },
+    "donaciones": {
+      "filename": "assets/rua-v3-chili-accion-2.webp",
+      "width": 1280,
+      "height": 720,
+      "alt": "Jornada colectiva de recolección de residuos junto al río Chili en Tiabaya.",
+      "caption": "Acción conjunta por el río Chili · Julio de 2024",
+      "source": "https://www.unsa.edu.pe/estudiantes-de-la-escuela-profesional-de-trabajo-social-realizaron-limpieza-en-las-riberas-del-rio-chili-en-tiabaya/",
+      "credit": "UNSA – Oficina Universitaria de Imagen Institucional"
+    },
+    "convenios": {
+      "filename": "assets/rua-v3-chili-accion-1.webp",
+      "width": 1398,
+      "height": 786,
+      "alt": "Indicaciones al equipo participante antes de limpiar las riberas del río Chili.",
+      "caption": "Preparación de una jornada compartida en Tiabaya · Julio de 2024",
+      "source": "https://www.unsa.edu.pe/estudiantes-de-la-escuela-profesional-de-trabajo-social-realizaron-limpieza-en-las-riberas-del-rio-chili-en-tiabaya/",
+      "credit": "UNSA – Oficina Universitaria de Imagen Institucional"
+    },
+    "equipo": {
+      "filename": "assets/rua-v3-hunter-accion-1.webp",
+      "width": 1312,
+      "height": 792,
+      "alt": "Organizaciones y participantes reunidos durante la campaña Hunter Sostenible de 2023.",
+      "caption": "Organizaciones y participantes de Hunter Sostenible · Junio de 2023",
+      "source": "https://www.gob.pe/institucion/munijacobohunter/noticias/777235-primera-campana-de-sensibilizacion-ambiental-hunter-sostenible-en-el-corso-de-la-amistad-2023",
+      "credit": "Municipalidad Distrital Jacobo Hunter"
+    },
+    "participa": {
+      "filename": "assets/rua-v3-hunter-accion-2.webp",
+      "width": 1600,
+      "height": 1202,
+      "alt": "Acción de sensibilización y recolección de residuos entre los asistentes al Corso de la Amistad.",
+      "caption": "Sensibilización ambiental en Hunter · Junio de 2023",
+      "source": "https://www.gob.pe/institucion/munijacobohunter/noticias/777235-primera-campana-de-sensibilizacion-ambiental-hunter-sostenible-en-el-corso-de-la-amistad-2023",
+      "credit": "Municipalidad Distrital Jacobo Hunter"
+    }
+  }
+}

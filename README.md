@@ -19,8 +19,10 @@ node scripts/build.mjs
 ```
 
 - `content/actividades.json` contiene las historias, fechas, fuentes y fotografías publicadas.
+- `content/media.json` contiene los tres paisajes de portada y las fotografías de las secciones, con sus textos alternativos, dimensiones, fuentes y créditos.
 - `content/equipo.json` está preparado para incorporar nombres, cargos, periodo de gestión y fotografías cuando RUA los confirme. Mientras sus campos estén pendientes, la web muestra el directorio en actualización y el canal oficial de representantes.
-- `scripts/build.mjs`, `scripts/layout.mjs`, `scripts/stories.mjs` y `scripts/sections.mjs` generan las páginas. Edita estas fuentes y vuelve a generar el HTML para conservar los cambios.
+- `scripts/build.mjs`, `scripts/layout.mjs`, `scripts/stories.mjs`, `scripts/sections.mjs` y `scripts/experience.mjs` generan las páginas. Edita estas fuentes y vuelve a generar el HTML para conservar los cambios.
+- `carousel.js` controla los carruseles de paisajes y líneas de acción. `experience.css` define su presentación y las adaptaciones para celulares; se carga después de `styles.css` y `updates.css`.
 - Los archivos de las fotografías se encuentran en `assets/`; las rutas declaradas en el contenido deben corresponder a archivos incluidos en el repositorio.
 
 ## Contenido
@@ -28,9 +30,12 @@ node scripts/build.mjs
 - Inicio, Nosotros, Actividades, Equipo, Participa, Donaciones, Convenios y Fuentes y créditos.
 - Tres historias destacadas en portada y seis actividades en el archivo, cada una con su página y fotografías.
 - Menú responsive, filtros de historias, preguntas frecuentes y panel de redes sociales para escritorio con iconos de las aplicaciones.
+- Carrusel de tres paisajes con controles anterior/siguiente, selección de imagen, pausa y gestos táctiles. La rotación se detiene al pasar el cursor, recibir foco, salir de la vista o cambiar de pestaña; empieza pausada si se solicita reducir el movimiento.
+- Las tres líneas de acción se muestran juntas en escritorio y como carrusel en pantallas de hasta 620 px. Las historias destacadas permiten desplazamiento horizontal en celulares.
 - Preparación local de mensajes y enlaces oficiales de contacto. No se envían ni almacenan datos desde el formulario.
-- Fotografía del Misti en alta resolución y versiones optimizadas para la web, con atribución y licencia en `creditos.html`.
+- Fotografías del Misti y del río Chili en alta resolución y versiones optimizadas para la web, con atribución y licencia en `creditos.html`.
 - Fotografías reales de actividades vinculadas a publicaciones institucionales de la UNSA y municipalidades, con sus fuentes y créditos.
+- Shaun acompaña el acceso a redes en escritorio y aparece una segunda vez en la invitación a participar de la portada. Su procedencia se indica en `creditos.html`.
 - Donaciones y propuestas de convenio canalizadas mediante el contacto oficial de colaboración de RUA.
 
 Pendientes editoriales: nombres, cargos, periodo de gestión y retratos confirmados del equipo; nuevas fotografías que facilite RUA; convocatorias actuales y datos oficiales de colaboración o donación que se acuerde publicar. No se incluyen estadísticas, integrantes ni cuentas bancarias ficticias.
