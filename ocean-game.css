@@ -1,0 +1,46 @@
+[data-ocean-trigger]{display:block;width:100%;padding:0;border:0;border-radius:inherit;background:none;cursor:default;touch-action:manipulation;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+[data-ocean-trigger] picture,[data-ocean-trigger] img{display:block;width:100%}
+[data-ocean-trigger]:focus-visible{outline:3px solid var(--green);outline-offset:5px}
+body.ocean-open{overflow:hidden}
+.ocean-dialog{--ocean-ink:#102f44;--ocean-blue:#087f9c;--ocean-cream:#fff8e7;box-sizing:border-box;width:min(960px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);padding:0;border:1px solid #ffffff70;border-radius:16px;background:var(--ocean-cream);color:var(--ocean-ink);box-shadow:0 28px 100px #011b2a80;overflow:auto;margin:auto}
+.ocean-dialog::backdrop{background:#041d2bca;backdrop-filter:blur(5px)}
+.ocean-dialog *{box-sizing:border-box}
+.ocean-header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 26px 18px}
+.ocean-kicker{display:block;color:#087b91;font:700 .7rem/1.5 ui-monospace,monospace;letter-spacing:.18em;margin-bottom:5px}
+.ocean-dialog .ocean-title{font-size:clamp(1.3rem,2.8vw,1.9rem);line-height:1.15;letter-spacing:-.035em;color:var(--ocean-ink);margin:0}
+.ocean-close{flex:0 0 44px;display:grid;place-items:center;width:44px;height:44px;border:1px solid #102f4426;border-radius:50%;background:transparent;color:var(--ocean-ink);font-size:1.65rem}
+.ocean-scoreboard{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 26px;background:#102f44;color:#e9ffff;font:700 .7rem/1.4 ui-monospace,monospace;letter-spacing:.08em}
+.ocean-scoreboard>span{color:#a5dcdb}
+.ocean-scores{display:flex;gap:24px}
+.ocean-scores span{display:flex;align-items:center;gap:10px}
+.ocean-scores strong{color:#fff4bc;font-size:1.15rem;font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.ocean-stage{position:relative;isolation:isolate;overflow:hidden;background:#97d9e9;line-height:0}
+.ocean-canvas{display:block;width:100%;height:auto;image-rendering:pixelated;image-rendering:crisp-edges;touch-action:none;outline-offset:-4px}
+.ocean-panel{position:absolute;inset:0;display:grid;place-items:center;padding:18px;background:#0d344b3b;line-height:1.5}
+.ocean-panel[hidden]{display:none}
+.ocean-panel-card{max-width:430px;width:100%;padding:24px 30px;background:#fffaedfa;border:3px solid #102f44;box-shadow:6px 6px 0 #102f4438;text-align:center}
+.ocean-panel-card .ocean-panel-tag{font:700 .6875rem/1.4 ui-monospace,monospace;letter-spacing:.14em;color:#087f91;margin-bottom:9px}
+.ocean-panel-card h3{font-size:clamp(1.35rem,2.5vw,1.9rem);line-height:1.15;margin:0 0 12px;color:#102f44;letter-spacing:-.03em}
+.ocean-panel-card p{font-size:.9rem;line-height:1.6;color:#43616b;margin:0 0 16px}
+.ocean-dialog button,.ocean-dialog a{-webkit-tap-highlight-color:transparent}
+.ocean-dialog button:focus-visible,.ocean-dialog a:focus-visible,.ocean-canvas:focus-visible{outline:3px solid #f5ac54;outline-offset:3px}
+.ocean-play,.ocean-reward-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 22px;border:0;border-radius:3px;background:#0b687b;color:white;font-weight:700;font-size:.9rem;line-height:1.4;text-decoration:none;box-shadow:0 3px 0 #084553}
+.ocean-play:hover,.ocean-reward-link:hover{background:#095468}
+.ocean-play:disabled{opacity:.55;cursor:wait}
+.ocean-secondary{display:block;border:0;background:transparent;color:#176779;text-decoration:underline;text-underline-offset:4px;font-size:.8125rem;min-height:44px;margin:8px auto 0;padding:8px 12px}
+.ocean-touch-controls{display:flex;gap:12px;padding:14px 24px 0}
+.ocean-touch-controls button{flex:1;min-height:50px;padding:12px;border:1px solid #8fa8a6;border-radius:5px;background:#e6eeE5;color:#102f44;font-weight:700;font-size:.9rem;touch-action:none;user-select:none;-webkit-user-select:none}
+.ocean-touch-controls button[data-game-jump]{background:#dff1c1;border-color:#a4bf88}
+.ocean-touch-controls button:active,.ocean-touch-controls button.is-held{transform:translateY(2px);background:#b9d6ca}
+.ocean-tools{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 24px 18px;flex-wrap:wrap}
+.ocean-tools p{font-size:.75rem;line-height:1.6;color:#536b6c;margin:0;max-width:450px}
+.ocean-tools kbd{font:inherit;font-weight:700;color:#163f50}
+.ocean-settings{display:flex;gap:8px;flex-shrink:0}
+.ocean-settings button{min-height:44px;border:0;background:transparent;padding:8px;color:#244e5d;font-size:.75rem;text-decoration:underline;text-underline-offset:4px}
+.ocean-goal{display:flex;gap:8px;align-items:center;padding:0 24px 17px;font-size:.6875rem;color:#567273;line-height:1.5}
+.ocean-goal progress{appearance:none;border:0;height:4px;flex:1;min-width:30px;border-radius:3px;overflow:hidden;background:#d2dfd4}
+.ocean-goal progress::-webkit-progress-bar{background:#d2dfd4}.ocean-goal progress::-webkit-progress-value{background:#09869b}.ocean-goal progress::-moz-progress-bar{background:#09869b}
+@media(min-width:750px){.ocean-touch-controls{display:none}}
+@media(max-width:620px){.ocean-dialog{width:calc(100% - 16px);max-height:calc(100dvh - 16px);border-radius:11px}.ocean-header{padding:16px 16px 13px;gap:8px}.ocean-kicker{font-size:.625rem}.ocean-title{max-width:250px}.ocean-close{flex-basis:38px;width:38px;height:38px}.ocean-scoreboard{padding:10px 16px;gap:5px;font-size:.6rem}.ocean-scoreboard>span{display:none}.ocean-scores{justify-content:space-between;width:100%;gap:15px}.ocean-scores strong{font-size:1rem}.ocean-panel{padding:14px}.ocean-panel-card{padding:15px 18px;max-width:340px;border-width:2px;box-shadow:4px 4px 0 #102f4438}.ocean-panel-card p{font-size:.8125rem;line-height:1.45;margin-bottom:12px}.ocean-panel-card h3{font-size:1.45rem;margin-bottom:9px}.ocean-panel-card .ocean-panel-tag{font-size:.6rem;margin-bottom:7px}.ocean-touch-controls{padding:12px 14px 0;gap:10px}.ocean-tools{padding:4px 14px 10px;gap:0;justify-content:center}.ocean-tools p{font-size:.6875rem;text-align:center;width:100%;order:1}.ocean-settings{justify-content:center}.ocean-goal{padding:0 14px 14px;font-size:.625rem}.ocean-secondary{margin-top:2px;min-height:38px}}
+@media(max-height:520px) and (orientation:landscape){.ocean-dialog{max-width:760px}.ocean-header{padding:8px 16px}.ocean-kicker{display:none}.ocean-stage{max-height:58dvh}.ocean-canvas{max-height:58dvh;object-fit:contain;background:#97d9e9}.ocean-touch-controls{display:none}.ocean-tools{padding:2px 16px}.ocean-goal{padding-bottom:8px}}
+@media(prefers-reduced-motion:reduce){.ocean-dialog::backdrop{backdrop-filter:none}}

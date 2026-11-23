@@ -69,3 +69,24 @@ El botón **Sonido: sí/no** del footer refleja su estado mediante `aria-pressed
 Quedan por confirmar los nombres de la coordinación general y de cada comisión, los cargos, el periodo de gestión y los retratos correspondientes. El directorio conserva su estado pendiente hasta recibir esa información. También se podrán incorporar nuevas fotografías propias, convocatorias actuales y los datos oficiales de colaboración o donación que RUA acuerde publicar. No se incluyen estadísticas, integrantes ni cuentas bancarias ficticias.
 
 La vista de prueba solicita a los buscadores que no la indexen. Es pública y accesible mediante el enlace; esta indicación no es un control de acceso.
+
+
+## Minijuego secreto (v5)
+
+En la foto grande de la III Ecoferia, cinco pulsaciones consecutivas (sin más de 1,2 segundos entre ellas) abren «Lucianita y el océano». Las miniaturas de Inicio y Actividades conservan sus enlaces normales. El juego y sus dibujos originales en Canvas se cargan únicamente al descubrir el secreto.
+
+- Inicio: «Ayuda a Lucianita a salvar el océano».
+- Espacio/↑ o tocar la playa para saltar; ↓ o mantener el botón para agacharse. P pausa; Escape cierra.
+- Playa en pixel art, ballenas ocasionales, barriles, residuos, aviones y mensajes alternos de conservación.
+- Carrera infinita con dificultad gradual, récord local y sonidos con opción de silencio.
+- A 1.000 puntos aparece la recompensa: la campaña facilitada por RUA se abre tras 5 segundos. «Seguir jugando» cancela la navegación y permite continuar. Cambiar de pestaña cancela la cuenta atrás.
+- Cerrar, cambiar de pestaña o redimensionar pausa la partida. No hay cuentas, envíos de datos ni marcadores remotos.
+
+Archivos: `ocean-game.js` (interfaz), `ocean-engine.mjs` (física), `ocean-art.js` (dibujos) y `ocean-game.css`.
+
+Validación reproducible, sin dependencias adicionales:
+
+```sh
+node --test tests/ocean-engine.test.mjs tests/ocean-ui.test.mjs
+node scripts/build.mjs
+```

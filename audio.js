@@ -48,6 +48,7 @@
     document.addEventListener('click', event => {
       if (!event.isTrusted || event.defaultPrevented || event.button !== 0) return;
       const target = event.target?.closest?.('button, a[href], summary');
+      if (target?.closest('#ocean-game')) return;
       if (!target || target.matches(':disabled, [aria-disabled="true"]')) return;
       if (target.matches('[data-sound-toggle]')) {
         muted = !muted;
