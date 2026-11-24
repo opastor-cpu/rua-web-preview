@@ -1101,6 +1101,1023 @@
         }
       ],
       "editorial_note": "Fecha13julio visible enafiche, año2025 y edición confirmados porposts cierre/resultados25jul2025. Fotos oficiales soncollages originales, sinrecortar niinventarparticipación. No contarafiche como foto adicional. Gamesresultsavailablebutnotneededfortext."
+    },
+    {
+      "id": "titicaca-2017",
+      "title": "Unidos por el Titicaca: limpieza y sensibilización",
+      "date": "2017",
+      "date_label": "Archivo de 2017",
+      "date_precision": "year",
+      "category": "Acción en el territorio",
+      "filter": "territorio",
+      "place": "Puno · Lago Titicaca",
+      "summary": "RUA compartió su participación en la jornada Unidos por el Titicaca, junto a voluntarios de distintas regiones. El encuentro combinó sensibilización sobre la contaminación del lago y recolección de residuos en su litoral.",
+      "source": "https://www.facebook.com/media/set/?set=a.844368709071372&type=3",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "images": [
+        {
+          "alt": "Voluntarios reunidos con guantes y materiales durante la jornada Unidos por el Titicaca.",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "context": "Unidos por el Titicaca: limpieza y sensibilización",
+          "source": "https://www.facebook.com/photo/?fbid=844369412404635&set=a.844368709071372",
+          "filename": "assets/rua-v12-titicaca-2017-01.webp",
+          "dimensions": {
+            "width": 960,
+            "height": 720
+          }
+        }
+      ]
+    },
+    {
+      "id": "festimar-2017",
+      "title": "Festimar: educación por la vida del mar",
+      "date": "2017-06-25",
+      "date_label": "25 de junio de 2017",
+      "date_precision": "day",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Matarani, Islay, Arequipa",
+      "summary": "RUA participó en Festimar, el festival de conservación del mar y sus especies realizado en Matarani. Con juegos y materiales educativos, el equipo conversó con la comunidad sobre la biodiversidad y el cuidado del ecosistema marino costero.",
+      "source": "https://www.facebook.com/media/set/?set=a.832191026955807&type=3",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "images": [
+        {
+          "alt": "Voluntarias con polos de RUA y materiales sobre biodiversidad marina en Festimar, Matarani.",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "context": "Festimar: educación por la vida del mar",
+          "source": "https://www.facebook.com/photo/?fbid=832191523622424&set=a.832191026955807",
+          "filename": "assets/rua-v12-festimar-2017-01.webp",
+          "dimensions": {
+            "width": 1224,
+            "height": 918
+          }
+        }
+      ]
+    },
+    {
+      "id": "hora-planeta-paucarpata-2017",
+      "title": "La Hora del Planeta llega a Paucarpata",
+      "date": "2017-03",
+      "date_label": "Marzo de 2017",
+      "date_precision": "month",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Paucarpata, Arequipa",
+      "summary": "El nodo UNSA participó en la Hora del Planeta en Paucarpata. Voluntarios y comunidad se reunieron alrededor de mensajes y representaciones del planeta para promover el compromiso ambiental.",
+      "source": "https://www.facebook.com/media/set/?set=a.734810393360538&type=3",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "images": [
+        {
+          "alt": "Integrantes de RUA junto a su banner durante la Hora del Planeta en Paucarpata.",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "context": "La Hora del Planeta llega a Paucarpata",
+          "source": "https://www.facebook.com/photo/?fbid=734811456693765&set=a.734810393360538",
+          "filename": "assets/rua-v12-hora-planeta-paucarpata-2017-01.webp",
+          "dimensions": {
+            "width": 960,
+            "height": 540
+          }
+        }
+      ]
+    },
+    {
+      "id": "limpieza-chili-2026",
+      "title": "Una jornada de limpieza en el valle del Chili",
+      "date": "2026-08-29",
+      "date_label": "29 de agosto de 2026",
+      "date_precision": "day",
+      "category": "Acción ambiental",
+      "filter": "territorio",
+      "place": "Valle del río Chili · Arequipa",
+      "summary": "Voluntarios de RUA recogieron residuos en el valle del río Chili durante su primera prueba de campo. La jornada combinó el cuidado de este espacio natural con el trabajo en equipo y la integración de nuevos participantes.",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02EfRvwJXseRcKv6B5VJQJxWciykuCrQgJyHhNYVVx7RuLAJWV53Fgz4o8kTLn8Rk4l",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "images": [
+        {
+          "alt": "Collage oficial de RUA con voluntarios en una salida de campo al valle del río Chili.",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "context": "Una jornada de limpieza en el valle del Chili",
+          "source": "https://www.facebook.com/photo/?fbid=1122825813414902&set=pcb.1122825916748225",
+          "filename": "assets/rua-v12-limpieza-chili-2026-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          },
+          "kind": "photo_collage"
+        }
+      ]
+    },
+    {
+      "id": "picnic-paint-2026",
+      "title": "Picnic & Paint: compartir y crear al aire libre",
+      "date": "2026-08-30",
+      "date_label": "30 de agosto de 2026",
+      "date_precision": "day",
+      "category": "Comunidad RUA",
+      "filter": "encuentros",
+      "place": "Parque Juan Pablo Vizcardo y Guzmán · Arequipa",
+      "summary": "RUA Crece reunió a sus voluntarios para una tarde de pintura al aire libre. Entre pinceles y colores, el grupo compartió un espacio de creatividad, expresión e integración.",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02eUiieeRMfSVCHQfGLGauvK87u4SmDi6W3XdMcBEmk5tPE213SDodyGcWmeWoVftPl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "images": [
+        {
+          "alt": "Collage de RUA con las pinturas realizadas durante Picnic & Paint.",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "context": "Picnic & Paint: compartir y crear al aire libre",
+          "source": "https://www.facebook.com/photo/?fbid=1128080856222731&set=pcb.1128080922889391",
+          "filename": "assets/rua-v12-picnic-paint-2026-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          },
+          "kind": "photo_collage"
+        }
+      ]
+    },
+    {
+      "id": "aves-2026",
+      "title": "Monitoreo de aves: conocer nuestra biodiversidad",
+      "date": "2026-09-12",
+      "date_label": "12 de septiembre de 2026",
+      "date_precision": "day",
+      "category": "Biodiversidad",
+      "filter": "territorio",
+      "place": "Campus de Biomédicas, UNSA · Arequipa",
+      "summary": "RUA y PAU Arequipa compartieron una jornada de monitoreo de aves en el campus de Biomédicas. Los participantes aprendieron a observar y reconocer especies cercanas mientras exploraban la biodiversidad universitaria.",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02U4TeA3qF9psgzMsx94zYT8GULMR6CkX5V2KrrVi4Mp28rcrDgNZifrnpyovCXEaKl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "images": [
+        {
+          "alt": "Collage oficial de RUA y PAU Arequipa sobre la salida de monitoreo de aves.",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "context": "Monitoreo de aves: conocer nuestra biodiversidad",
+          "source": "https://www.facebook.com/photo/?fbid=1128082166222600&set=pcb.1128082229555927",
+          "filename": "assets/rua-v12-aves-2026-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          },
+          "kind": "photo_collage"
+        }
+      ]
+    },
+    {
+      "id": "rua-cometa-2026",
+      "title": "RUA Cometa: creatividad en Carmen Alto",
+      "date": "2026-08-01",
+      "date_label": "1 de agosto de 2026",
+      "date_precision": "day",
+      "category": "Comunidad RUA",
+      "filter": "encuentros",
+      "place": "Mirador de Carmen Alto · Arequipa",
+      "summary": "El equipo de RUA construyó y puso a volar sus propias cometas en Carmen Alto. La tarde combinó creatividad, colaboración y un encuentro para fortalecer los lazos entre voluntarios.",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid029eiKuoRpKpq4kXJsZ1mGyDezNy33rei2oDecnw2uGo5TyPpuBTG349arAPDjK8enl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "images": [
+        {
+          "alt": "Voluntario de RUA con una cometa creada en la jornada de Carmen Alto.",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "context": "RUA Cometa: creatividad en Carmen Alto",
+          "source": "https://www.facebook.com/photo/?fbid=1093002823063868&set=pcb.1093002866397197",
+          "filename": "assets/rua-v12-rua-cometa-2026-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          },
+          "kind": "photo_collage"
+        }
+      ]
+    },
+    {
+      "id": "caminata-fotografica-2025",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid04bp5GEVL2kRz64VYEqKpFkY5anXuyMwyu5HDKLDxy8b3GkbzrLaZz6PXMnLoJfFfl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Caminata fotográfica: naturaleza a través de nuevas miradas",
+      "date": "2025-11-29",
+      "date_label": "29 de noviembre de 2025",
+      "date_precision": "day",
+      "category": "Comunidad RUA",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "RUA compartió una caminata en contacto con la naturaleza, un picnic y un concurso de fotografía. El encuentro reunió miradas y talentos para descubrir el paisaje y disfrutar juntos del recorrido.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=903935535303932&set=pcb.903935811970571",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Fotografías de la caminata y el concurso organizados por RUA en noviembre de 2025.",
+          "context": "Caminata fotográfica: naturaleza a través de nuevas miradas",
+          "filename": "assets/rua-v12-caminata-fotografica-2025-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "rua-emprende-2025",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0wEULsyK3tYbkbW6V76zbhK6ccuQzVmw5HXo4UPEYNc5gHcdPQRPVLUzgQoVF3QXCl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "RUA Emprende: creatividad, intercambio y comunidad",
+      "date": "2025-10-18",
+      "date_label": "18 de octubre de 2025",
+      "date_precision": "day",
+      "category": "Emprendimiento y comunidad",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "RUA Emprende reunió proyectos, productos y servicios de emprendedores locales. La jornada incluyó stands, un trueque ambiental, música y actividades de participación para acercar nuevas ideas a la comunidad.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=871605768536909&set=pcb.871606005203552",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Registro fotográfico oficial de la feria RUA Emprende 2025.",
+          "context": "RUA Emprende: creatividad, intercambio y comunidad",
+          "filename": "assets/rua-v12-rua-emprende-2025-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "intercomis-2025",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0299E6Z5effSzyKH2Z4vCSppAcD45r5jLiPxxJ37DsL2sgghqkMx4Y7NdvzHd8Dt5Ul",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Intercomis RUA: las comisiones se encuentran",
+      "date": "2025-10-12",
+      "date_label": "12 de octubre de 2025",
+      "date_precision": "day",
+      "category": "Comunidad RUA",
+      "filter": "encuentros",
+      "place": "Parque Selva Alegre · Arequipa",
+      "summary": "Las comisiones de RUA se reunieron en una jornada de confraternidad con juegos, retos y presentaciones. El encuentro fortaleció la amistad, la creatividad y el trabajo en equipo entre voluntarios.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=866549919042494&set=pcb.866550145709138",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Voluntarios de las comisiones de RUA en el encuentro Intercomis 2025.",
+          "context": "Intercomis RUA: las comisiones se encuentran",
+          "filename": "assets/rua-v12-intercomis-2025-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "arbolizacion-sachaca-2025",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid01HpbjBJdnzb7gQU9nXM3NBRjQoExcr5U6yWg4V66AeYWLMYggjJhW9PbieexjBMAl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Arbolización y cuidado de un espacio en Sachaca",
+      "date": "2025-09-07",
+      "date_label": "7 de septiembre de 2025",
+      "date_precision": "day",
+      "category": "Restauración y comunidad",
+      "filter": "territorio",
+      "place": "Sachaca · Arequipa",
+      "summary": "RUA y los participantes de su convocatoria colaboraron en una jornada de arbolización en Sachaca. Prepararon y limpiaron el terreno, además de pintar llantas y el cerco del espacio intervenido.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=837406921956794&set=pcb.837406995290120",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Voluntarios de RUA durante la jornada de arbolización en Sachaca.",
+          "context": "Arbolización y cuidado de un espacio en Sachaca",
+          "filename": "assets/rua-v12-arbolizacion-sachaca-2025-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "navidad-2024",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid018YCBx9ntGXCTjzx3pze6DtsioJJBsyrzC3h2tu3F31Kxz3iFvNGWkSLYToGjJThl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Navirua: una jornada de alegría compartida",
+      "date": "2024-12-20",
+      "date_label": "20 de diciembre de 2024",
+      "date_precision": "day",
+      "category": "Comunidad y solidaridad",
+      "filter": "encuentros",
+      "place": "Teatro de la Biblioteca Ateneo · Arequipa",
+      "summary": "RUA organizó una jornada navideña para niñas, niños y sus madres en el Teatro de la Biblioteca Ateneo. Con el apoyo de DEMUNA, compartieron chocolatada, regalos y actividades de encuentro.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=631552935875528&set=pcb.631553215875500",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Registro de RUA durante la jornada navideña en la Biblioteca Ateneo.",
+          "context": "Navirua: una jornada de alegría compartida",
+          "filename": "assets/rua-v12-navidad-2024-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "aves-octubre-2024",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02YXPznaJtKNVje4B6x4VTs4VpswMiGc3VQYRqFfdGjksMnBCuFTidxVFt1hX3acxPl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Monitoreo de aves urbanas con PAU Arequipa",
+      "date": "2024-10-19",
+      "date_label": "19 y 20 de octubre de 2024",
+      "date_precision": "day",
+      "category": "Biodiversidad",
+      "filter": "territorio",
+      "place": "Arequipa",
+      "summary": "RUA participó en las jornadas de monitoreo de aves urbanas organizadas por PAU Arequipa. La actividad abierta al público acercó a los participantes a la observación y al cuidado de la biodiversidad local.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=614240387606783&set=pcb.613972104300278",
+          "credit": "Irene Fernandez Luque y Gustavo Alonso Azurin Zúñiga · publicación de RUA",
+          "kind": "photo_collage",
+          "alt": "Registro del monitoreo de aves urbanas compartido por RUA y PAU Arequipa.",
+          "context": "Monitoreo de aves urbanas con PAU Arequipa",
+          "filename": "assets/rua-v12-aves-octubre-2024-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "vancan-paucarpata-2024",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0iizLuecCj71qUXVRC7nrpdjv8LDZB1Z1AS6BZL59K6Zoi5ksVzxdUeHU1J5N54gHl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "VANCAN: apoyo voluntario a la salud animal",
+      "date": "2024-11-09",
+      "date_label": "9 y 10 de noviembre de 2024",
+      "date_precision": "day",
+      "category": "Bienestar animal",
+      "filter": "territorio",
+      "place": "Paucarpata · Arequipa",
+      "summary": "Voluntarios de RUA apoyaron como anotadores en la campaña de vacunación canina VANCAN, organizada por la Municipalidad Distrital de Paucarpata. Su participación acompañó el trabajo de prevención de la rabia y el cuidado animal.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=600974212266734&set=pcb.600974328933389",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Voluntarios de RUA apoyando el registro en la campaña canina VANCAN de Paucarpata.",
+          "context": "VANCAN: apoyo voluntario a la salud animal",
+          "filename": "assets/rua-v12-vancan-paucarpata-2024-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "big-day-2024",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02z1LYHH8uwmCwZqEup1WAnszxK8vhAmXZ8gbpZ3aLtRNVc6W6gMd1GuHJrs8jqzaPl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "October Big Day: observar y registrar la vida silvestre",
+      "date": "2024-10",
+      "date_label": "Octubre de 2024",
+      "date_precision": "month",
+      "category": "Biodiversidad",
+      "filter": "territorio",
+      "place": "Región Arequipa",
+      "summary": "RUA participó en una salida por el October Big Day para observar y fotografiar aves. La experiencia contó con el apoyo de PAU Arequipa y del Colegio de Biólogos de Arequipa, acercando al voluntariado a la ciencia ciudadana y los ecosistemas de la región.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=593167736380715&set=pcb.593167806380708",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Participantes y aves fotografiados durante la salida de RUA por October Big Day 2024.",
+          "context": "October Big Day: observar y registrar la vida silvestre",
+          "filename": "assets/rua-v12-big-day-2024-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "caminata-fotografica-2024",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02WJy23UP2PybGzDvsLhnpXpuW6X44iGcH8mFUTKTWKn2xEh1nhUzcPuSxj1E4GP9Fl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Caminata fotográfica por el valle de Chilina",
+      "date": "2024-10-05",
+      "date_label": "5 de octubre de 2024",
+      "date_precision": "day",
+      "category": "Naturaleza y comunidad",
+      "filter": "encuentros",
+      "place": "Valle de Chilina · Arequipa",
+      "summary": "La caminata fotográfica de RUA invitó a descubrir el valle de Chilina con una mirada sensible hacia la naturaleza. Los participantes compartieron sus imágenes en un concurso que puso en valor la belleza y la fragilidad de los ecosistemas.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=576022601428562&set=pcb.576022828095206",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Fotografías de la caminata de RUA por el valle de Chilina en octubre de 2024.",
+          "context": "Caminata fotográfica por el valle de Chilina",
+          "filename": "assets/rua-v12-caminata-fotografica-2024-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "huellitas-2024",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid053odohknpbPkajjc5KGPynzXdHpEugfgMAwNSvor1RyfmXYWjKsetQmmurXhn87ml",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Huellitas: apoyo al cuidado de perros rescatados",
+      "date": "2024-09-15",
+      "date_label": "15 de septiembre de 2024",
+      "date_precision": "day",
+      "category": "Bienestar animal",
+      "filter": "territorio",
+      "place": "Refugio Huellitas en Busca de Amor · Arequipa",
+      "summary": "El equipo de RUA visitó el refugio Huellitas en Busca de Amor para acompañar a los animales y apoyar su cuidado. Los participantes entregaron croquetas, detergentes y platos, gracias a las donaciones y el tiempo de su comunidad.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=566011169096372&set=pcb.566023779095111",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Integrantes de RUA durante la visita y entrega de apoyo al refugio Huellitas.",
+          "context": "Huellitas: apoyo al cuidado de perros rescatados",
+          "filename": "assets/rua-v12-huellitas-2024-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "parque-las-rocas-2024",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0bdNo7o1dhkdaFXegq2cZfySwUfEL3Y2T2Z9tFhkokJ9f1Vf2xMS9dsND3jPzDYFTl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Reforestación compartida en el Parque Las Rocas",
+      "date": "2024-09-08",
+      "date_label": "8 de septiembre de 2024",
+      "date_precision": "day",
+      "category": "Restauración y comunidad",
+      "filter": "territorio",
+      "place": "Parque Las Rocas, Alto Selva Alegre · Arequipa",
+      "summary": "RUA se unió a RAJU, Scouts 152 y ACIAMI en una jornada de reforestación impulsada por la Municipalidad de Alto Selva Alegre. El equipo colaboró en la plantación de árboles y el cuidado del Parque Las Rocas.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=558026313228191&set=pcb.558026449894844",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Participantes de RUA y organizaciones aliadas durante la reforestación del Parque Las Rocas.",
+          "context": "Reforestación compartida en el Parque Las Rocas",
+          "filename": "assets/rua-v12-parque-las-rocas-2024-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "green-club-2023",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02CAHoBxVPqrNC8EkFczQup43LQ7RY7WBt1Wcx3o4pQ2TeDdQ3SbPMRtQ5iktjghSol",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Green Club: aprender a cuidar mares y ríos",
+      "date": "2023-11-07",
+      "date_label": "7 de noviembre de 2023",
+      "date_precision": "day",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Colegio Juliette Harman, Selva Alegre · Arequipa",
+      "summary": "Green Club de RUA visitó el colegio Juliette Harman para conversar sobre la contaminación de mares y ríos. Los estudiantes participaron con preguntas, curiosidad y actividades que acercaron el cuidado del agua al aula.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=385413117156179&set=pcb.385413290489495",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Actividad de Green Club de RUA con estudiantes del colegio Juliette Harman.",
+          "context": "Green Club: aprender a cuidar mares y ríos",
+          "filename": "assets/rua-v12-green-club-2023-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "rua-emprende-2023",
+      "source": "https://www.facebook.com/photo/?fbid=375605171470307&set=a.286178397079652",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "RUA Emprende: comunidad y creatividad con Doggy Style",
+      "date": "2023-11-04",
+      "date_label": "4 de noviembre de 2023",
+      "date_precision": "day",
+      "category": "Emprendimiento y comunidad",
+      "filter": "encuentros",
+      "place": "Parque Selva Alegre · Arequipa",
+      "summary": "La edición 2023 de RUA Emprende incluyó Doggy Style, un encuentro con mascotas y sus acompañantes. El equipo compartió la participación de la comunidad y reconoció a Morocha como ganadora de la actividad.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=375605171470307&set=a.286178397079652",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo",
+          "alt": "Morocha y sus acompañantes durante Doggy Style en RUA Emprende 2023.",
+          "context": "RUA Emprende: comunidad y creatividad con Doggy Style",
+          "filename": "assets/rua-v12-rua-emprende-2023-01.webp",
+          "dimensions": {
+            "width": 1440,
+            "height": 1440
+          }
+        }
+      ]
+    },
+    {
+      "id": "limpieza-yura-2023",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02hzWJxpkozx5EvV74JRspgkU1tGvXtEN8fYvf2SM44dMsFgQyU6yiipieBTPYFejhl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Limpieza en Yura: voluntariado por un entorno cuidado",
+      "date": "2023-10-14",
+      "date_label": "14 de octubre de 2023",
+      "date_precision": "day",
+      "category": "Acción en el territorio",
+      "filter": "territorio",
+      "place": "Yura · Arequipa",
+      "summary": "Voluntarios de RUA participaron en una jornada de limpieza en Yura. El trabajo compartido permitió retirar residuos del entorno y reafirmar el compromiso de la comunidad con los espacios naturales de Arequipa.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=365062479191243&set=pcb.365065712524253",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Participantes de la jornada de limpieza de RUA en Yura, octubre de 2023.",
+          "context": "Limpieza en Yura: voluntariado por un entorno cuidado",
+          "filename": "assets/rua-v12-limpieza-yura-2023-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "deporte-rua-2023",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02dmSPx38YjvfWSvNo5hiv4pdwE6Sp5FKYjt8CsXfooNSaSBxuw5PbBWZiTTF1Kn9Ql",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Una mañana deportiva entre RUA UNSA y RUA Católica",
+      "date": "2023",
+      "date_label": "Archivo de 2023",
+      "date_precision": "year",
+      "category": "Comunidad RUA",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "Los equipos de RUA UNSA y RUA Católica compartieron una mañana deportiva. El encuentro abrió un espacio de compañerismo, energía y participación entre voluntarios de ambas comunidades universitarias.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=347203414310483&set=pcb.347203520977139",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Voluntarios de RUA UNSA y RUA Católica en una mañana deportiva compartida.",
+          "context": "Una mañana deportiva entre RUA UNSA y RUA Católica",
+          "filename": "assets/rua-v12-deporte-rua-2023-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "cerro-verde-2023",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0VxDanBt1SPQJwtNTrn1PcnkwfYh3qFX48y1yLkDSawBikeHtLUR7Z4oF5npxe148l",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Visita al vivero de Cerro Verde",
+      "date": "2023",
+      "date_label": "Archivo de 2023",
+      "date_precision": "year",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Cerro Verde · Arequipa",
+      "summary": "RUA visitó un vivero en Cerro Verde para conocer su diversidad vegetal y aprender sobre la conservación de especies nativas. La experiencia acercó al voluntariado a prácticas de cuidado y preservación del entorno.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=346065994424225&set=pcb.346066384424186",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Participantes de RUA durante la visita educativa al vivero de Cerro Verde.",
+          "context": "Visita al vivero de Cerro Verde",
+          "filename": "assets/rua-v12-cerro-verde-2023-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "desfile-arequipa-2023",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02MspB2VHNPW53Hie3KvT1rUDwindJLcAEyCXUCNawpYvRvziKPcb9KBUpVNueZM3Rl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "RUA en el desfile por el aniversario de Arequipa",
+      "date": "2023-08",
+      "date_label": "Agosto de 2023",
+      "date_precision": "month",
+      "category": "Comunidad RUA",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "El voluntariado de RUA UNSA participó en el desfile por el Día de Arequipa, invitado por Caja Arequipa. Sus integrantes compartieron una celebración de identidad local y compromiso con la ciudad.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=344968914533933&set=pcb.344973227866835",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Integrantes de RUA UNSA participando en el desfile por el Día de Arequipa 2023.",
+          "context": "RUA en el desfile por el aniversario de Arequipa",
+          "filename": "assets/rua-v12-desfile-arequipa-2023-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "my-greenfriend-2023",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid038NSzhXfom95dUyYwMfh3v3tdwE8P4wZ11bnCfCMw2a9QxXSa7FmFRNbL4fFRuqJSl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "My Greenfriend: plantar y crear un vínculo con la naturaleza",
+      "date": "2023",
+      "date_label": "Archivo de 2023",
+      "date_precision": "year",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Comunidad universitaria UNSA · Arequipa",
+      "summary": "La iniciativa My Greenfriend invitó a integrantes de la comunidad agustina a plantar árboles y darles un nombre propio. RUA compartió las experiencias de los participantes como una forma de acercar el cuidado de la naturaleza a la vida cotidiana.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=319709020393256&set=pcb.319709337059891",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Participantes de My Greenfriend compartiendo la plantación y el cuidado de sus árboles.",
+          "context": "My Greenfriend: plantar y crear un vínculo con la naturaleza",
+          "filename": "assets/rua-v12-my-greenfriend-2023-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "innovacion-ecoindustrial-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02UgAwmZGea9iPQss3Z3vA5H15n5ppNa7LcbjDcRLK6edcjQEwEck9wuNUJsLFuBLEl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Innovación Ecoindustrial y Feria Innova Emprende",
+      "date": "2022",
+      "date_label": "Archivo de 2022",
+      "date_precision": "year",
+      "category": "Innovación y sostenibilidad",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "RUA participó como coorganizador del I Congreso de Innovación Ecoindustrial junto a AIChE UNSA, Revolución Ambiental y FAGSOL. En paralelo, la Feria Innova Emprende reunió propuestas vinculadas con creatividad, reciclaje y educación.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2236676736507222&set=pcb.2236677473173815",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Participación de RUA en el Congreso de Innovación Ecoindustrial y la Feria Innova Emprende.",
+          "context": "Innovación Ecoindustrial y Feria Innova Emprende",
+          "filename": "assets/rua-v12-innovacion-ecoindustrial-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "cero-residuos-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid033TJSCN4Fnhd3wLgKyPNSHWaFhPm5DLGuHiwLAXjj3jkGvjLfQ56bj41z9rxJGUXkl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Night Party: un encuentro con temática de cero residuos",
+      "date": "2022",
+      "date_label": "Archivo de 2022",
+      "date_precision": "year",
+      "category": "Comunidad y reciclaje",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "RUA compartió los recuerdos de Night Party, un encuentro con temática de cero residuos. La dinámica de ingreso con cinco chapitas vinculó la convivencia del grupo con una propuesta de recuperación de materiales.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2227698627405033&set=pcb.2227705917404304",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Participantes de RUA en el encuentro Night Party con temática de cero residuos.",
+          "context": "Night Party: un encuentro con temática de cero residuos",
+          "filename": "assets/rua-v12-cero-residuos-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "green-fest-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02wAYH4gt6sYe2UMRZv8bLgEPALVYNrEc5orXvWts9ZHgUREjqdRmrfwHeDvqirtQSl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Green Fest AQP: compartir una jornada ambiental",
+      "date": "2022",
+      "date_label": "Archivo de 2022",
+      "date_precision": "year",
+      "category": "Encuentros ambientales",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "RUA compartió un registro de sus actividades en Green Fest AQP. Las fotografías recuerdan una jornada para encontrarse, conocerse y participar como comunidad ambiental.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2201381110036785&set=pcb.2201381366703426",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Registro fotográfico de las actividades de RUA en Green Fest AQP.",
+          "context": "Green Fest AQP: compartir una jornada ambiental",
+          "filename": "assets/rua-v12-green-fest-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "aniversario-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid01CoE7rb16JH9vGkCepfGKAJbWqusGHb53oAfuY73VnCE2hebMypPRYvSqbdgyQfRl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Ruaniversario: recuerdos de una comunidad que crece",
+      "date": "2022",
+      "date_label": "Archivo de 2022",
+      "date_precision": "year",
+      "category": "Comunidad RUA",
+      "filter": "encuentros",
+      "place": "Arequipa",
+      "summary": "El nodo compartió una memoria fotográfica de su aniversario, con momentos de encuentro entre sus integrantes. Un registro de los vínculos que acompañan el trabajo voluntario de RUA.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2199134380261458&set=pcb.2199134663594763",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Integrantes de RUA reunidos en la celebración de su aniversario, compartida en 2022.",
+          "context": "Ruaniversario: recuerdos de una comunidad que crece",
+          "filename": "assets/rua-v12-aniversario-2022-01.webp",
+          "dimensions": {
+            "width": 940,
+            "height": 788
+          }
+        }
+      ]
+    },
+    {
+      "id": "escalerilla-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02ijKHb2yN5nyuCDvzepfS7dL3DuqpGv1oAtCrejYAqMHiTSpHDYBfJz6GZMB8K1vEl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Escalerilla: conocer cómo se tratan las aguas residuales",
+      "date": "2022-07-21",
+      "date_label": "21 de julio de 2022",
+      "date_precision": "day",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "PTAR Escalerilla · Arequipa",
+      "summary": "Voluntarios de diferentes carreras visitaron la planta de tratamiento de aguas residuales Escalerilla. El recorrido permitió conocer los procesos de tratamiento, el trabajo de laboratorio y la producción de biosólidos, conectando la formación universitaria con la gestión del agua.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2150088928499337&set=pcb.2150089238499306",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Integrantes de RUA durante la visita técnica a la PTAR Escalerilla.",
+          "context": "Escalerilla: conocer cómo se tratan las aguas residuales",
+          "filename": "assets/rua-v12-escalerilla-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "vivero-municipal-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid037BKUpUZZwh8nmeqqWUqZogasEhBuzR1xgWoX5NYCd9CwHckFG6Jer5BxJez7zUoml",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Una visita al vivero municipal de Arequipa",
+      "date": "2022-07-02",
+      "date_label": "2 de julio de 2022",
+      "date_precision": "day",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Vivero municipal · Arequipa",
+      "summary": "RUA UNSA y RUA UCSM visitaron el vivero municipal para conocer distintas especies de plantas, las labores del lugar y a quienes las hacen posibles. Una experiencia de aprendizaje sobre el cuidado de los espacios verdes de la ciudad.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2132782846896612&set=pcb.2132857506889146",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Voluntarios de RUA UNSA y RUA UCSM en la visita al vivero municipal de Arequipa.",
+          "context": "Una visita al vivero municipal de Arequipa",
+          "filename": "assets/rua-v12-vivero-municipal-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "biohuertos-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0cLmUdqhKPz3FrC3ACQeHG2cVTYgmyt7Yyvy53kNjiwSRh11D4558Lo14eBY49C4pl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Biohuertos en botellas: aprender cultivando",
+      "date": "2022-06-18",
+      "date_label": "18 de junio de 2022",
+      "date_precision": "day",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Hogar San Aníbal di Francia, Tiabaya · Arequipa",
+      "summary": "RUA participó junto a organizaciones universitarias y voluntariados en un taller de biohuertos en Tiabaya. Las niñas y los niños crearon pequeños cultivos en botellas reutilizadas, decorándolas y aprendiendo mediante actividades compartidas.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2124342617740635&set=pcb.2124342654407298",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Taller de biohuertos con botellas reutilizadas, realizado por RUA y organizaciones aliadas en Tiabaya.",
+          "context": "Biohuertos en botellas: aprender cultivando",
+          "filename": "assets/rua-v12-biohuertos-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "characato-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02sPTsiuF6j1KbU9fYuCMMSLyV7NDbaPM522H6ZrDx5vRQiTffqto47r5W3p6VJrEwl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Reforestación en Characato por más áreas verdes",
+      "date": "2022-06-18",
+      "date_label": "18 de junio de 2022",
+      "date_precision": "day",
+      "category": "Restauración y comunidad",
+      "filter": "territorio",
+      "place": "Characato · Arequipa",
+      "summary": "Voluntarios de RUA participaron en una reforestación en Characato, invitados por la Subgerencia de Gestión Ambiental de la Municipalidad Provincial de Arequipa. La jornada contribuyó al esfuerzo compartido por ampliar las áreas verdes de la región.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2122068044634759&set=pcb.2122068284634735",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Voluntarios de RUA trabajando en la reforestación de Characato.",
+          "context": "Reforestación en Characato por más áreas verdes",
+          "filename": "assets/rua-v12-characato-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "umapalca-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02F7rn97YEUGgHkmiG3PqVDjaXraL5YkGPxudG3BkQiysuExwdh9QmJ7C8uF5KuEBFl",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Arborización en Umapalca por el Día del Medio Ambiente",
+      "date": "2022-06-05",
+      "date_label": "5 de junio de 2022",
+      "date_precision": "day",
+      "category": "Restauración y comunidad",
+      "filter": "territorio",
+      "place": "Asociación de Vivienda Umapalca, Sabandía · Arequipa",
+      "summary": "RUA se sumó a una arborización en Umapalca por el Día Mundial del Medio Ambiente. Municipalidades, SERFOR, Cerro Verde y distintos voluntariados compartieron la plantación de especies como vilco, huaranguillo, cahuato y molle serrano.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2114839012024329&set=pcb.2114841658690731",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "alt": "Voluntarios de RUA UNSA y RUA UCSM junto a sus banners y plantones durante la arborización de Umapalca.",
+          "kind": "photo",
+          "filename": "assets/rua-v12-umapalca-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          },
+          "context": "Arborización en Umapalca por el Día del Medio Ambiente"
+        }
+      ]
+    },
+    {
+      "id": "vivero-cerro-verde-2022",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid02GGhKrP5QUSVosGXP5ZQeb1BViMSUS94vGABLN8B9cNXJM5RRPbLbcFGk2WHX1HNml",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Vivero de Cerro Verde: aprender para reforestar",
+      "date": "2022-04-28",
+      "date_label": "28 de abril de 2022",
+      "date_precision": "day",
+      "category": "Educación ambiental",
+      "filter": "educacion",
+      "place": "Vivero de Cerro Verde · Arequipa",
+      "summary": "Quince voluntarios de RUA realizaron una visita guiada al vivero de Cerro Verde con apoyo de movilidad de la UNSA. Aprendieron sobre especies forestales, hidroponía, compostaje y la plantación de plantones para futuras campañas de reforestación.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=2093633357478228&set=pcb.2093634520811445",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo_collage",
+          "alt": "Voluntarios de RUA aprendiendo sobre especies forestales en el vivero de Cerro Verde.",
+          "context": "Vivero de Cerro Verde: aprender para reforestar",
+          "filename": "assets/rua-v12-vivero-cerro-verde-2022-01.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        }
+      ]
+    },
+    {
+      "id": "mollendo-2018",
+      "source": "https://www.facebook.com/RUA.UNSA/posts/pfbid0mveV7RJAoA4NdySWY1g7QfcUWq6uj8BmJ9ernjJ1xXouHU7vgPYEtA8nt7jueiN9l",
+      "publisher": "RUA Perú UNSA-Arequipa · Facebook oficial",
+      "publication_status": "published",
+      "title": "Mollendo: una playa más limpia y una comunidad consciente",
+      "date": "2018-02-25",
+      "date_label": "25 de febrero de 2018",
+      "date_precision": "day",
+      "category": "Acción en el territorio",
+      "filter": "territorio",
+      "place": "Playa de Mollendo · Arequipa",
+      "summary": "RUA UNSA participó en una limpieza de la playa de Mollendo organizada por MINCETUR, BGreen y LOOP. Los voluntarios recogieron residuos y sensibilizaron a los veraneantes sobre el cuidado del litoral.",
+      "images": [
+        {
+          "source": "https://www.facebook.com/photo/?fbid=908628195978756&set=pcb.908632965978279",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "alt": "Voluntarios con polos y carteles de RUA en la playa de Mollendo durante la jornada de limpieza.",
+          "kind": "photo",
+          "filename": "assets/rua-v12-mollendo-2018-01.webp",
+          "dimensions": {
+            "width": 1600,
+            "height": 1067
+          },
+          "context": "Mollendo: una playa más limpia y una comunidad consciente"
+        },
+        {
+          "source": "https://www.facebook.com/photo/?fbid=908632125978363&set=pcb.908632965978279",
+          "credit": "RUA Perú UNSA-Arequipa",
+          "kind": "photo",
+          "alt": "Residuos recolectados en la playa de Mollendo, al cierre de la jornada de limpieza.",
+          "context": "Mollendo: una playa más limpia y una comunidad consciente",
+          "filename": "assets/rua-v12-mollendo-2018-02.webp",
+          "dimensions": {
+            "width": 1280,
+            "height": 719
+          }
+        }
+      ]
     }
   ]
 }

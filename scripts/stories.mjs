@@ -39,12 +39,12 @@ function storyCard(activity) {
   const photo = visiblePhotos(activity)[0];
   const url = `actividad-${activity.id}.html`;
   const category = activity.filter || categories[activity.id] || 'encuentros';
-  return `<article class="story-card${photo ? '' : ' action-card story-card-text'}" data-story="${category}" data-year="${escape((activity.date || activity.published_date || '').slice(0,4))}" data-search="${escape([activity.title, activity.place, activity.date_label, activity.category, activity.summary].join(' '))}">${photo ? `<a class="story-art" href="${url}" aria-label="Ver más sobre ${escape(activity.title)}">${activityPhoto(photo)}<span class="art-label">${escape(activity.category)}</span></a>` : `<span class="eyebrow">${escape(activity.category)}</span>`}<div class="story-meta"><span>${escape(activity.date_label)}</span></div><h3><a href="${url}">${escape(activity.title)}</a></h3><p>${escape(activity.summary.split('. ')[0])}${activity.summary.split('. ').length > 1 ? '.' : ''}</p><a class="text-link" href="${url}" aria-label="Ver más sobre ${escape(activity.title)}">Ver más</a></article>`;
+  return `<article class="story-card${photo ? '' : ' action-card story-card-text'}" data-story="${category}" data-year="${escape((activity.date || activity.published_date || '').slice(0,4))}">${photo ? `<a class="story-art" href="${url}" aria-label="Ver más sobre ${escape(activity.title)}">${activityPhoto(photo)}<span class="art-label">${escape(activity.category)}</span></a>` : `<span class="eyebrow">${escape(activity.category)}</span>`}<div class="story-meta"><span>${escape(activity.date_label)}</span></div><h3><a href="${url}">${escape(activity.title)}</a></h3><p>${escape(activity.summary.split('. ')[0])}${activity.summary.split('. ').length > 1 ? '.' : ''}</p><a class="text-link" href="${url}" aria-label="Ver más sobre ${escape(activity.title)}">Ver más</a></article>`;
 }
 
 export function archiveTools() {
   const years = [...new Set(activities.map(a => (a.date || a.published_date || '').slice(0,4)).filter(Boolean))].sort().reverse();
-  return `<div class="archive-tools"><label class="archive-search" for="story-search"><span>Busca una historia</span><input type="search" id="story-search" placeholder="Agua, reforestación, feria…" autocomplete="off"></label><label for="story-year"><span>Explora por año</span><select id="story-year"><option value="all">Todos</option>${years.map(year=>`<option value="${year}">${year}</option>`).join('')}</select></label></div>`;
+  return `<div class="archive-tools"><label for="story-year"><span>Explora por año</span><select id="story-year"><option value="all">Todos</option>${years.map(year=>`<option value="${year}">${year}</option>`).join('')}</select></label></div>`;
 }
 
 export function archivePage(chosen = activities) {
@@ -55,7 +55,7 @@ export function stories(limit) {
   const chosen = limit
     ? ['ecoferia-yaravi-2026', 'rua-major-2025', 'agua-colegio-2018'].map(id => activities.find(activity => activity.id === id)).filter(Boolean).slice(0, limit)
     : activities;
-  return archivePage(chosen);
+  return archivePage(chosen) + (limit ? '' : '<div class="archive-more" hidden><button class="button outline" type="button" id="story-more">Ver más historias</button></div>');
 }
 
 export function programCards(external = sourceLink) {

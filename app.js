@@ -42,25 +42,32 @@ document.addEventListener('click', event => {
 });
 matchMedia('(max-width: 850px)').addEventListener('change', event => { if (event.matches) closeSocial(); });
 
-const storySearch = document.querySelector('#story-search');
 const storyYear = document.querySelector('#story-year');
-const normalizeSearch = value => value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-function filterStories() {
+const storyMore = document.querySelector('#story-more');
+let visibleStoryLimit = 12;
+function filterStories(reset = true) {
+  if (reset) visibleStoryLimit = 12;
   const category = document.querySelector('.filter-button[aria-pressed="true"]')?.dataset.filter || 'all';
   const year = storyYear?.value || 'all';
-  const query = normalizeSearch(storySearch?.value.trim() || '');
   let count = 0;
+  let shown = 0;
   document.querySelectorAll('[data-story]').forEach(card => {
-    card.hidden = (category !== 'all' && card.dataset.story !== category)
-      || (year !== 'all' && card.dataset.year !== year)
-      || !normalizeSearch(card.dataset.search || '').includes(query);
-    if (!card.hidden) count++;
+    const matches = (category === 'all' || card.dataset.story === category)
+      && (year === 'all' || card.dataset.year === year);
+    if (matches) count++;
+    card.hidden = !matches || count > visibleStoryLimit;
+    if (!card.hidden) shown++;
   });
   const counter = document.querySelector('#filter-count');
-  if (counter) counter.textContent = count ? `${count} ${count === 1 ? 'historia' : 'historias'}` : 'No encontramos historias con estos filtros. Prueba otro año o palabra.';
+  if (counter) counter.textContent = count ? (shown < count ? `${shown} de ${count} historias` : `${count} ${count === 1 ? 'historia' : 'historias'}`) : 'No encontramos historias con estos filtros. Prueba otro año o tema.';
+  if (storyMore) storyMore.parentElement.hidden = shown >= count;
 }
-storySearch?.addEventListener('input', filterStories);
-storyYear?.addEventListener('change', filterStories);
+storyYear?.addEventListener('change', () => filterStories());
+storyMore?.addEventListener('click', () => {
+  visibleStoryLimit += 12;
+  filterStories(false);
+});
+if (storyYear) filterStories();
 document.querySelectorAll('.filter-button').forEach(button => {
   button.addEventListener('click', () => {
     document.querySelectorAll('.filter-button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
