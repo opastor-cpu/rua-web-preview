@@ -1,4 +1,4 @@
-# RUA Perú · Nodo UNSA Arequipa — versión 4 de prueba
+# RUA Perú · Nodo UNSA Arequipa — versión 9 de prueba
 
 Rediseño responsive de la web de RUA, publicado como una versión de prueba para revisión en celulares y escritorio.
 
@@ -6,11 +6,13 @@ Rediseño responsive de la web de RUA, publicado como una versión de prueba par
 
 Este repositorio es una copia de trabajo para revisar el diseño. El [sitio original](https://lauracadillo.github.io/RUA/) se mantiene separado de esta publicación.
 
-## Versión 4
+## Versión 9
 
-- 34 fotografías distintas de actividades y comunidad, incluida la imagen oficial del equipo: 33 sin contar ese banner. Las variantes JPG/WebP de una misma fotografía no se cuentan como imágenes nuevas. El paisaje de portada se documenta por separado.
-- Archivo de 20 actividades, con fechas, fuentes y páginas de detalle. La portada muestra una selección breve; el archivo permite consultar el resto.
-- Tres programas documentados: **GreenClub**, **RUA Emprende** y **RUA Pet**. Sus textos distinguen las actividades realizadas de las metas y oportunidades pendientes de confirmación.
+- Archivo público de 12 historias, todas con imagen comprobada, descripción breve, fecha y enlace a la publicación de respaldo mediante «Ver más». RUA Noticias muestra su publicación editorial original; las otras historias incluyen fotografías del evento. Las imágenes de jornadas colectivas no identifican a todas las personas retratadas como miembros de RUA.
+- Se completaron imágenes de Apaga y Actúa, Hunter Sostenible, AREISA, Corso de la Amistad 2024 y RUA Noticias. Se conservaron los créditos y se optimizaron los nuevos recursos en WebP, sin ampliar su resolución.
+- Ocho actividades y tres programas (**GreenClub**, **RUA Emprende** y **RUA Pet**) permanecen guardados en el contenido con `publication_status: "awaiting_photo"`, sin aparecer en el sitio. Las antiguas URLs de esas actividades redirigen al archivo público. Para publicarlos, incorporar una imagen verificable y cambiar su estado a `published`.
+- Las tarjetas destacadas también muestran una descripción breve en celular. Los enlaces informativos usan «Ver más».
+- El QR de Yape y los datos bancarios siguen sin completar, por indicación de RUA. No se publican el QR de ejemplo ni los números ficticios del sitio original.
 - Una única fotografía fija del Misti en portada. En celulares, texto e imagen comparten la misma composición. La portada no rota ni muestra controles o rótulos sobre la fotografía.
 - Galerías independientes en las secciones, con flechas discretas para avanzar o retroceder, y el banner del equipo mostrado completo.
 - Redes sociales con iconos y acceso a [LinkedIn de RUA](https://www.linkedin.com/company/rua-unsa-aqp/), además de Instagram, Facebook, TikTok, YouTube y WhatsApp.
@@ -28,8 +30,8 @@ Desde la raíz del repositorio, genera las páginas después de modificar el con
 node scripts/build.mjs
 ```
 
-- `content/actividades.json` y `content/archivo-ampliado.json` contienen las 20 actividades, con sus fechas, fuentes y fotografías disponibles.
-- `content/programas.json` contiene GreenClub, RUA Emprende y RUA Pet, junto con sus fuentes.
+- `content/actividades.json` y `content/archivo-ampliado.json` conservan las 20 actividades: 12 publicadas y 8 pendientes de fotografía, con sus fechas y fuentes.
+- `content/programas.json` conserva GreenClub, RUA Emprende y RUA Pet pendientes de fotografía, junto con sus fuentes.
 - `content/media.json` contiene el paisaje fijo de portada, la imagen oficial del equipo y las galerías de las secciones, con textos alternativos, dimensiones, fuentes y créditos.
 - `content/equipo.json` está preparado para incorporar nombres, cargos, periodo de gestión y fotografías cuando RUA los confirme. Mientras sus campos estén pendientes, la web muestra el directorio en actualización y el canal oficial de representantes.
 - `scripts/build.mjs`, `scripts/layout.mjs`, `scripts/stories.mjs`, `scripts/sections.mjs` y `scripts/experience.mjs` generan las páginas. Edita estas fuentes y vuelve a generar el HTML para conservar los cambios.
@@ -37,6 +39,7 @@ node scripts/build.mjs
 - `experience.css` define las composiciones fotográficas, las galerías y las adaptaciones para celulares; se carga después de `styles.css` y `updates.css`.
 - `audio.js` genera el sonido de interacción mediante Web Audio. `audio.css` presenta el control de sonido del footer; ambos se incluyen en las páginas generadas.
 - Los archivos de las fotografías se encuentran en `assets/`; las rutas declaradas en el contenido deben corresponder a archivos incluidos en el repositorio.
+- La generación se detiene si una actividad o programa público carece de imagen, descripción o fuente, o si una fotografía no tiene archivo, crédito o texto alternativo. Los registros pendientes se excluyen explícitamente.
 
 ## Galerías y accesibilidad
 

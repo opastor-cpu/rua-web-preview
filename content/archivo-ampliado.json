@@ -39,7 +39,8 @@
           "alt": "Material de sensibilización de RUA sobre la protección de los ecosistemas marinos.",
           "context": "Mensajes para el cuidado de los ecosistemas marinos."
         }
-      ]
+      ],
+      "publication_status": "published"
     },
     {
       "id": "hilando-verde-2025",
@@ -104,7 +105,8 @@
           "alt": "Participantes organizan y reciben plantones durante Hilando Verde 2025.",
           "context": "Trabajo compartido para preparar la plantación en la comunidad."
         }
-      ]
+      ],
+      "publication_status": "published"
     },
     {
       "id": "aniversario-11-2025",
@@ -119,7 +121,9 @@
       "publisher": "Radio Universidad – UNSA",
       "date_label": "Mayo de 2025",
       "filter": "encuentros",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "mundo-alpaca-2024",
@@ -134,31 +138,52 @@
       "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
       "date_label": "3 de agosto de 2024",
       "filter": "educacion",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "aniversario-arequipa-2024",
-      "title": "RUA en el aniversario de Arequipa",
-      "category": "Comunidad RUA",
-      "summary": "RUA se sumó a las celebraciones de la ciudad con participación en el corso, registrada en dos fechas de agosto.",
-      "date": "2024-08-04",
-      "date_precision": "multiple_days",
-      "additional_dates": [
-        "2024-08-15"
-      ],
+      "title": "Recuperación de residuos en el Corso de la Amistad",
+      "category": "Sensibilización ciudadana",
+      "summary": "Voluntarios de RUA colaboraron con Caja Arequipa en una iniciativa de recuperación de residuos durante el Corso de la Amistad 2024, como parte de las celebraciones por el aniversario de la ciudad.",
+      "date": "2024-08-15",
+      "date_precision": "day",
       "place": "Arequipa",
-      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
-      "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
-      "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
-      "date_label": "4 y 15 de agosto de 2024",
-      "filter": "encuentros",
-      "images": []
+      "source": "https://www.cajaarequipa.pe/caja-arequipa-celebra-el-484-aniversario-de-arequipa-reconociendo-a-microempresarios-y-su-compromiso-ambiental-en-el-corso-de-la-amistad-2024/",
+      "publisher": "Caja Arequipa",
+      "date_label": "15 de agosto de 2024",
+      "filter": "territorio",
+      "images": [
+        {
+          "filename": "assets/rua-v9-corso-caja-2.webp",
+          "dimensions": {
+            "width": 1024,
+            "height": 683
+          },
+          "kind": "photo",
+          "credit": "Caja Arequipa",
+          "alt": "Carro alegórico de Caja Arequipa y público durante el Corso de la Amistad 2024.",
+          "context": "Corso de la Amistad 2024, donde RUA colaboró en la recuperación de residuos junto a Caja Arequipa.",
+          "source": "https://www.cajaarequipa.pe/caja-arequipa-celebra-el-484-aniversario-de-arequipa-reconociendo-a-microempresarios-y-su-compromiso-ambiental-en-el-corso-de-la-amistad-2024/",
+          "original_image_url": "https://www.cajaarequipa.pe/wp-content/uploads/2024/08/caja-arequipa-corso-2024.jpg"
+        }
+      ],
+      "published_date": "2024-08-16",
+      "secondary_sources": [
+        {
+          "url": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf#page=3",
+          "publisher": "UNSA · Boletín de agosto de 2024"
+        }
+      ],
+      "editorial_note": "La imagen documenta el corso del 15 de agosto, no la participación del 4 de agosto que también aparece en el boletín. No identifica a personas retratadas como integrantes de RUA.",
+      "publication_status": "published"
     },
     {
       "id": "rua-noticias-agosto-2024",
       "title": "Actualidad con RUA Noticias",
       "category": "Comunicación ambiental",
-      "summary": "Durante agosto, el nodo registró tres entregas de RUA Noticias dentro de su programación de actividades.",
+      "summary": "RUA compartió tres entregas de RUA Noticias durante agosto de 2024. El boletín de la UNSA recoge la publicación «Éxodo silencioso de las charapas», dedicada a estas tortugas amazónicas.",
       "date": "2024-08-09",
       "date_precision": "multiple_days",
       "additional_dates": [
@@ -166,12 +191,27 @@
         "2024-08-26"
       ],
       "place": "Arequipa",
-      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf",
+      "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf#page=3",
       "publisher": "UNSA – Dirección Universitaria de Desarrollo Estudiantil",
       "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
       "date_label": "Agosto de 2024",
       "filter": "educacion",
-      "images": []
+      "images": [
+        {
+          "filename": "assets/rua-v9-agosto-2024-p3-image3.webp",
+          "dimensions": {
+            "width": 494,
+            "height": 414
+          },
+          "kind": "poster",
+          "credit": "RUA Perú UNSA – Arequipa / Boletín UNSA de desarrollo estudiantil",
+          "alt": "Publicación RUA Noticias titulada Éxodo silencioso de las charapas.",
+          "context": "Publicación de RUA Noticias reproducida en el boletín universitario de agosto de 2024.",
+          "source": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf#page=3",
+          "original_image_url": "https://fcb.unsa.edu.pe/nutricion/wp-content/uploads/sites/3/2024/10/Boletin-Informativo_AGOSTO.pdf#page=3"
+        }
+      ],
+      "publication_status": "published"
     },
     {
       "id": "aves-urbanas-agosto-2024",
@@ -187,7 +227,9 @@
       "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
       "date_label": "17 y 18 de agosto de 2024",
       "filter": "territorio",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "ruito-heroe-2024",
@@ -202,7 +244,9 @@
       "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
       "date_label": "24 de agosto de 2024",
       "filter": "encuentros",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "enruate-agosto-2024",
@@ -217,7 +261,9 @@
       "source_location": "Página 3 del PDF, apartado de RUA, actividades realizadas",
       "date_label": "27 de agosto de 2024",
       "filter": "encuentros",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "navidad-honorio-delgado-2023",
@@ -232,7 +278,9 @@
       "source_location": "Memoria Anual 2023, página impresa 39, apartado Teatro Experimental – TEUNSA",
       "date_label": "2023",
       "filter": "encuentros",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "forestacion-cerrito-belen-2021",
@@ -247,7 +295,9 @@
       "source_location": "Memoria Anual 2021, Gestión del Cambio Climático, tabla de forestación del año 2021",
       "date_label": "22 de mayo de 2021",
       "filter": "territorio",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "forestacion-huanca-2021",
@@ -262,22 +312,52 @@
       "source_location": "Memoria Anual 2021, Gestión del Cambio Climático, tabla de forestación del año 2021",
       "date_label": "25 de abril de 2021",
       "filter": "territorio",
-      "images": []
+      "images": [],
+      "publication_status": "awaiting_photo",
+      "editorial_note": "Conservar pendiente: hay fuente documental, pero falta una fotografía comprobada de la actividad. No publicar hasta incorporarla."
     },
     {
       "id": "reforestacion-areisa",
       "title": "Colaboración en la segunda reforestación de AREISA",
       "category": "Restauración y comunidad",
       "summary": "RUA UNSA apoyó una jornada de recuperación de áreas verdes organizada por AREISA, junto a otros colectivos universitarios y la municipalidad provincial.",
-      "date": null,
-      "date_precision": "unknown",
+      "date": "2025-04-26",
+      "date_precision": "day",
       "published_date": "2025-05-04",
-      "place": "Arequipa",
+      "place": "Av. Los Incas, Arequipa",
       "source": "https://es.linkedin.com/posts/areisa_reforestaci%C3%B3n-areisa-medioambiente-activity-7324868676334010369-vBBr",
       "publisher": "AREISA",
-      "date_label": "Publicado en mayo de 2025",
+      "date_label": "26 de abril de 2025",
       "filter": "territorio",
-      "images": []
+      "images": [
+        {
+          "filename": "assets/rua-v9-areisa-1.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          },
+          "kind": "photo",
+          "credit": "AREISA",
+          "alt": "Participantes de la segunda reforestación de AREISA posan junto a los plantones.",
+          "context": "Foto de la segunda reforestación publicada por AREISA, organización que agradece el apoyo de RUA UNSA.",
+          "source": "https://es.linkedin.com/posts/areisa_reforestaci%C3%B3n-areisa-medioambiente-activity-7324868676334010369-vBBr",
+          "original_image_url": "https://media.licdn.com/dms/image/v2/D4E22AQEey1922V1O9Q/feedshare-image-high-res/B4EZacpO95GQAs-/0/1746384779582?e=2147483647&v=beta&t=ThAfqHWuDnkF7G46uE2ORJXBvUG_1IP_WozWnU-eQ3A"
+        },
+        {
+          "filename": "assets/rua-v9-areisa-2.webp",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          },
+          "kind": "poster",
+          "credit": "AREISA",
+          "alt": "Afiche original de la segunda reforestación de AREISA del 26 de abril.",
+          "context": "Publicación original de la convocatoria de AREISA, con fecha, lugar y organizaciones participantes.",
+          "source": "https://es.linkedin.com/posts/areisa_reforestaci%C3%B3n-areisa-medioambiente-activity-7324868676334010369-vBBr",
+          "original_image_url": "https://media.licdn.com/dms/image/v2/D4E22AQEIhRUwZtOTdA/feedshare-image-high-res/B4EZacpO9PH4As-/0/1746384779063?e=2147483647&v=beta&t=EyN4w0j7KCuYDk8zbInK-nqAeol8OFrM45iy-VWWmjM"
+        }
+      ],
+      "publication_status": "published"
     },
     {
       "id": "reforestacion-la-pascana-2023",
@@ -323,7 +403,8 @@
           "alt": "Voluntarios preparan el terreno para plantar árboles en La Pascana, Yura.",
           "context": "Trabajo en campo para recuperar y ampliar las áreas verdes de Yura."
         }
-      ]
+      ],
+      "publication_status": "published"
     }
   ]
 }

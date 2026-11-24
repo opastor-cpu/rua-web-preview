@@ -11,7 +11,25 @@
       "summary": "RUA Perú Nodo UNSA participó en la feria por la Hora del Planeta con mensajes y dinámicas para promover hábitos de cuidado ambiental junto a organizaciones y vecinos de Miraflores.",
       "source": "https://www.munimiraflores-arequipa.gob.pe/2025/03/24/exitosa-feria-ambiental-apaga-y-actua-por-la-hora-del-planeta/",
       "publisher": "Municipalidad Distrital de Miraflores – Arequipa",
-      "images": []
+      "images": [
+        {
+          "filename": "assets/rua-hora-planeta-2025.jpg",
+          "dimensions": {
+            "width": 2048,
+            "height": 1367
+          },
+          "credit": "Municipalidad Distrital de Miraflores – Arequipa",
+          "source": "https://www.munimiraflores-arequipa.gob.pe/wp-content/uploads/2025/03/486180330_1098708972290461_8464597921017778567_n.jpg",
+          "context": "Voluntario con camiseta RUA atendiendo a visitantes frente a un panel de la organización en la feria.",
+          "alt": "Voluntario de RUA comparte materiales de educación ambiental en la feria Apaga y Actúa de Miraflores.",
+          "webp": {
+            "filename": "assets/rua-hora-planeta-2025.webp",
+            "width": 1600,
+            "height": 1068,
+            "bytes": 176774
+          }
+        }
+      ]
     },
     {
       "id": "eco-innova-2025",
@@ -64,6 +82,7 @@
       "title": "XXII Encuentro Nacional de Universidades y Medio Ambiente",
       "category": "Formación ambiental",
       "date": "2025-03-04",
+      "end_date": "2025-03-08",
       "date_label": "4 al 8 de marzo de 2025",
       "date_precision": "day_range",
       "place": "Campus de la UNSA y de la UCSM, Arequipa",
@@ -186,7 +205,25 @@
       "summary": "Los nodos UNSA y UCSM de RUA participaron en la campaña Hunter Sostenible durante el Corso de la Amistad, junto a organizaciones y programas ambientales. La jornada promovió la conciencia ambiental y la recuperación de residuos.",
       "source": "https://www.gob.pe/institucion/munijacobohunter/noticias/777235-primera-campana-de-sensibilizacion-ambiental-hunter-sostenible-en-el-corso-de-la-amistad-2023",
       "publisher": "Municipalidad Distrital Jacobo Hunter",
-      "images": []
+      "images": [
+        {
+          "filename": "assets/rua-hunter-sostenible.jpg",
+          "dimensions": {
+            "width": 2048,
+            "height": 1538
+          },
+          "credit": "Municipalidad Distrital Jacobo Hunter",
+          "source": "https://cdn.www.gob.pe/uploads/document/file/4680576/353418573_603079371920886_5077194674990307938_n.jpg",
+          "context": "Vista de la campaña en el corso, con pancarta EDUCCA municipal y participantes. No identifica individualmente a integrantes de RUA.",
+          "alt": "Participantes de la campaña ambiental Hunter Sostenible durante el Corso de la Amistad de 2023.",
+          "webp": {
+            "filename": "assets/rua-hunter-sostenible.webp",
+            "width": 1600,
+            "height": 1202,
+            "bytes": 341614
+          }
+        }
+      ]
     }
   ]
 }

@@ -81,7 +81,8 @@
 .article-content h2{font-size:clamp(2rem,3.2vw,2.8rem)}
 .article-content .intro{font-size:1.0625rem}
 .article-source{border-top:1px solid var(--line);margin-top:26px;padding-top:20px;font-size:.875rem}
-.article-source>span{display:block;color:var(--muted);margin-bottom:8px}
+.article-source>span,.article-original>span{display:block;color:var(--muted);margin-bottom:8px}
+.article-original+.article-original{margin-top:18px}
 .article-source .text-link{overflow-wrap:anywhere}
 .activity-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
 .activity-gallery figure{min-width:0}
@@ -181,3 +182,23 @@
   .support-copy .button{width:100%;text-align:center}
   .footer-top{column-gap:20px}
 }
+
+/* Real images and a consistent route to each activity's original publication. */
+.program-card{min-width:0;align-items:stretch}
+.program-card.has-program-photo{padding:0;overflow:hidden;border-radius:5px}
+.program-photo{display:block;width:100%;aspect-ratio:4/3;background:#edf2e9;overflow:hidden}
+.program-photo picture{display:block;width:100%;height:100%}
+.program-photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.program-photo:hover img{transform:scale(1.025)}
+.program-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.has-program-photo .program-copy{padding:26px}
+.program-copy .eyebrow{margin-bottom:14px}
+.program-copy p{font-size:1rem;line-height:1.65}
+.story-art img.original-poster,.program-photo img.original-poster{object-fit:contain;background:#edf2e9;padding:10px}
+.article-main-photo img.original-poster{object-fit:contain;width:auto;max-width:100%;max-height:760px;margin-inline:auto;background:#edf2e9}
+@media(max-width:620px){
+  .has-program-photo .program-copy{padding:23px}
+  .program-grid{gap:28px}
+  .home-stories .story-grid-v2 .story-card>p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:.9375rem;margin-bottom:18px}
+}
+@media(prefers-reduced-motion:reduce){.program-photo img{transition:none}}

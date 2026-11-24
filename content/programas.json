@@ -7,7 +7,10 @@
       "date": "2024",
       "date_precision": "year",
       "source": "https://cdn.www.gob.pe/uploads/document/file/7198578/5652684-relacion-de-postulaciones-admitidas.pdf?v=1731113265",
-      "publisher": "Ministerio de la Mujer y Poblaciones Vulnerables – RENAVOL"
+      "publisher": "Ministerio de la Mujer y Poblaciones Vulnerables – RENAVOL",
+      "publication_status": "awaiting_photo",
+      "images": [],
+      "editorial_note": "Pendiente de fotografía comprobada y revisión de su información vigente antes de publicar."
     },
     {
       "id": "rua-emprende",
@@ -16,7 +19,10 @@
       "date": "2025-05",
       "date_precision": "month",
       "source": "https://radiouniversidadaqp.blogspot.com/2025/05/titulo-la-red-universitaria-ambiental.html",
-      "publisher": "Radio Universidad – UNSA"
+      "publisher": "Radio Universidad – UNSA",
+      "publication_status": "awaiting_photo",
+      "images": [],
+      "editorial_note": "Pendiente de fotografía comprobada y revisión de su información vigente antes de publicar."
     },
     {
       "id": "rua-pet",
@@ -25,7 +31,10 @@
       "date": "2025-05",
       "date_precision": "month",
       "source": "https://radiouniversidadaqp.blogspot.com/2025/05/titulo-la-red-universitaria-ambiental.html",
-      "publisher": "Radio Universidad – UNSA"
+      "publisher": "Radio Universidad – UNSA",
+      "publication_status": "awaiting_photo",
+      "images": [],
+      "editorial_note": "Pendiente de fotografía comprobada y revisión de su información vigente antes de publicar."
     }
   ]
 }
