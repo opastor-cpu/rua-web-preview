@@ -1,0 +1,20 @@
+{
+  "plant": {
+    "width": 464,
+    "description": "Shaun abraza un plantón y lleva una hoja sobre su lana.",
+    "filename": "assets/shaun-plant-v10.webp",
+    "height": 800
+  },
+  "cleanup": {
+    "width": 533,
+    "description": "Shaun recoge una botella con una pinza y lleva una bolsa reutilizable.",
+    "filename": "assets/shaun-cleanup-v10.webp",
+    "height": 800
+  },
+  "social": {
+    "width": 461,
+    "description": "Shaun con pañuelo verde, saludando y sosteniendo un teléfono.",
+    "filename": "assets/shaun-social-v10.webp",
+    "height": 800
+  }
+}

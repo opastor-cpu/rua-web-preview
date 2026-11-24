@@ -1,4 +1,4 @@
-# RUA Perú · Nodo UNSA Arequipa — versión 9 de prueba
+# RUA Perú · Nodo UNSA Arequipa — versión 10 de prueba
 
 Rediseño responsive de la web de RUA, publicado como una versión de prueba para revisión en celulares y escritorio.
 
@@ -6,7 +6,15 @@ Rediseño responsive de la web de RUA, publicado como una versión de prueba par
 
 Este repositorio es una copia de trabajo para revisar el diseño. El [sitio original](https://lauracadillo.github.io/RUA/) se mantiene separado de esta publicación.
 
-## Versión 9
+## Versión 10
+
+- 15 fotografías adicionales distribuidas entre Donaciones (6), Convenios (6), Nosotros (2) y Participa (1). Seis tarjetas de apoyo y colaboración incorporan imágenes; las nuevas galerías de Arequipa conservan sus flechas discretas y avances independientes de cinco segundos.
+- Las imágenes regionales tienen procedencia y créditos en `content/region.json` y en la página de créditos. Las fotografías de contexto no se presentan como actividades, integrantes ni convenios de RUA.
+- Tres ilustraciones distintas de Shaun: teléfono para las redes, plantón para la presentación y limpieza para el cierre. Cada página completa muestra tres poses en escritorio y dos en móvil, donde se oculta el acceso lateral de redes. Las ilustraciones fueron generadas con IA; el personaje pertenece a sus titulares.
+- El nombre **Red Universitaria Ambiental · Nodo UNSA** tiene mayor tamaño, contraste y separación en la portada.
+- Los enlaces y controles utilizan sonidos breves distintos según su jerarquía, manteniendo el silencio opcional y la navegación inmediata.
+
+## Contenido verificado
 
 - Archivo público de 12 historias, todas con imagen comprobada, descripción breve, fecha y enlace a la publicación de respaldo mediante «Ver más». RUA Noticias muestra su publicación editorial original; las otras historias incluyen fotografías del evento. Las imágenes de jornadas colectivas no identifican a todas las personas retratadas como miembros de RUA.
 - Se completaron imágenes de Apaga y Actúa, Hunter Sostenible, AREISA, Corso de la Amistad 2024 y RUA Noticias. Se conservaron los créditos y se optimizaron los nuevos recursos en WebP, sin ampliar su resolución.
@@ -33,6 +41,7 @@ node scripts/build.mjs
 - `content/actividades.json` y `content/archivo-ampliado.json` conservan las 20 actividades: 12 publicadas y 8 pendientes de fotografía, con sus fechas y fuentes.
 - `content/programas.json` conserva GreenClub, RUA Emprende y RUA Pet pendientes de fotografía, junto con sus fuentes.
 - `content/media.json` contiene el paisaje fijo de portada, la imagen oficial del equipo y las galerías de las secciones, con textos alternativos, dimensiones, fuentes y créditos.
+- `content/region.json` contiene las 15 imágenes regionales adicionales y su atribución; `scripts/regional.mjs` genera sus tarjetas, galerías y créditos. `content/mascots.json` identifica las tres poses de Shaun. `v10.css` aplica estos cambios de diseño sin alterar el minijuego.
 - `content/equipo.json` está preparado para incorporar nombres, cargos, periodo de gestión y fotografías cuando RUA los confirme. Mientras sus campos estén pendientes, la web muestra el directorio en actualización y el canal oficial de representantes.
 - `scripts/build.mjs`, `scripts/layout.mjs`, `scripts/stories.mjs`, `scripts/sections.mjs` y `scripts/experience.mjs` generan las páginas. Edita estas fuentes y vuelve a generar el HTML para conservar los cambios.
 - `carousel.js` controla las galerías y el carrusel móvil de líneas de acción. La fotografía de portada queda fuera de este comportamiento.
@@ -53,7 +62,7 @@ Con la preferencia de movimiento reducido, las galerías empiezan sin avance aut
 
 ## Sonido de interacción
 
-El sonido dura aproximadamente 50 ms, utiliza una ganancia máxima de `0.01` y limita los clics muy próximos entre sí. El contexto de audio se crea después de una interacción real del usuario: las rotaciones automáticas, cargas de página y clics programáticos no producen sonido.
+Los botones principales usan dos notas ascendentes (130 ms); la navegación, un tono de 85 ms; los enlaces de contenido, 65 ms; los externos, 90 ms; y los controles o desplegables, 40 ms. Las ganancias se mantienen entre `0.006` y `0.008` y se limitan los clics muy próximos. La navegación nunca espera al sonido. El contexto de audio se crea después de una interacción real del usuario: las rotaciones automáticas, cargas de página y clics programáticos no producen sonido. El minijuego y su foto secreta mantienen su audio independiente.
 
 El botón **Sonido: sí/no** del footer refleja su estado mediante `aria-pressed`. La preferencia de silencio se conserva en `localStorage` cuando está disponible; si el navegador bloquea el almacenamiento o el audio, la navegación sigue funcionando.
 
@@ -64,7 +73,7 @@ El botón **Sonido: sí/no** del footer refleja su estado mediante `aria-pressed
 - Las tres líneas de acción se muestran juntas en escritorio y como carrusel en pantallas de hasta 620 px. Las historias destacadas permiten desplazamiento horizontal en celulares.
 - Preparación local de mensajes y enlaces oficiales de contacto. No se envían ni almacenan datos desde el formulario.
 - Fotografías reales vinculadas a publicaciones verificadas de RUA e instituciones participantes. Las fuentes, créditos y condiciones localizadas se recogen en `creditos.html`; no se atribuye a RUA la pertenencia de todas las personas que aparecen en una actividad conjunta.
-- Shaun acompaña el acceso a redes en escritorio y aparece una segunda vez en la invitación a participar de la portada. Su procedencia se indica en `creditos.html`.
+- Shaun acompaña el acceso a redes en escritorio; otras dos poses aparecen en la presentación y el pie de página. En celular solo se muestran estas dos últimas. Su procedencia se indica en `creditos.html`.
 - Donaciones y propuestas de convenio canalizadas mediante el contacto oficial de colaboración de RUA.
 
 ## Pendientes editoriales
