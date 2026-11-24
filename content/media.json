@@ -140,6 +140,27 @@
   "galleries": {
     "home": [
       {
+        "filename": "assets/rua-v11-hazla-chili-2017-01.webp",
+        "width": 960,
+        "height": 720,
+        "alt": "Voluntarios de RUA con chalecos y guantes durante la campaña HAZla junto al río Chili.",
+        "credit": "RUA Perú UNSA-Arequipa",
+        "context": "Voluntariado por un río más limpio.",
+        "caption": "Voluntariado por un río más limpio · 2017",
+        "source": "https://www.facebook.com/photo/?fbid=723432417831669&set=a.723431654498412",
+        "original_url": "https://www.facebook.com/photo/?fbid=723432417831669&set=a.723431654498412",
+        "media_retrieval": "Imagen original servida por el visor público de Facebook, descargada con downloadMedia; se conserva publicación estable como procedencia.",
+        "sha256": "5ec7fa9a2cb0aeba41c69a0959099fecfa73291377afb6b91650ef6f51e57550",
+        "dimensions": {
+          "width": 960,
+          "height": 720
+        },
+        "kind": "photograph",
+        "original_sha256": "5ec7fa9a2cb0aeba41c69a0959099fecfa73291377afb6b91650ef6f51e57550",
+        "activity_id": "hazla-chili-2017",
+        "year": "2017"
+      },
+      {
         "id": "chili-encuentro",
         "filename": "assets/rua-v3-chili-encuentro.webp",
         "width": 1600,
@@ -249,6 +270,27 @@
     ],
     "about-hero": [
       {
+        "filename": "assets/rua-v11-hora-planeta-americas-2017-03.webp",
+        "width": 960,
+        "height": 720,
+        "alt": "Equipo de RUA con su banner durante la Hora del Planeta 2017.",
+        "credit": "RUA Perú UNSA-Arequipa",
+        "context": "El rebaño acompañando a la comunidad.",
+        "caption": "El rebaño acompañando a la comunidad · 2017",
+        "source": "https://www.facebook.com/photo/?fbid=735459166628994&set=a.735458333295744",
+        "original_url": "https://www.facebook.com/photo/?fbid=735459166628994&set=a.735458333295744",
+        "media_retrieval": "Imagen original servida por el visor público de Facebook, descargada con downloadMedia; se conserva publicación estable como procedencia.",
+        "sha256": "a2ed0da69888c419a678fc7722d33c1765c36a55fe39a71630be7f8b4e48168c",
+        "dimensions": {
+          "width": 960,
+          "height": 720
+        },
+        "kind": "photograph",
+        "original_sha256": "a2ed0da69888c419a678fc7722d33c1765c36a55fe39a71630be7f8b4e48168c",
+        "activity_id": "hora-planeta-americas-2017",
+        "year": "2017"
+      },
+      {
         "source": "https://www.gob.pe/institucion/serfor/noticias/773592-arequipa-serfor-y-rotary-club-internacional-inician-proyecto-de-reforestacion-con-primera-plantacion-de-4-mil-arboles",
         "credit": "SERFOR · Plataforma del Estado Peruano",
         "activitytitle": "Reforestación en La Pascana, Yura",
@@ -357,6 +399,27 @@
     ],
     "nosotros": [
       {
+        "filename": "assets/rua-v11-feria-yanahuara-2017-03.webp",
+        "width": 1280,
+        "height": 960,
+        "alt": "Voluntarios y visitantes junto al banner de RUA en la feria de Yanahuara.",
+        "credit": "RUA Perú UNSA-Arequipa",
+        "context": "Voluntariado y comunidad en la plaza.",
+        "caption": "Voluntariado y comunidad en la plaza · 2017",
+        "source": "https://www.facebook.com/photo/?fbid=773952172779693&set=a.773951169446460",
+        "original_url": "https://www.facebook.com/photo/?fbid=773952172779693&set=a.773951169446460",
+        "media_retrieval": "Imagen original servida por el visor público de Facebook, descargada con downloadMedia; se conserva publicación estable como procedencia.",
+        "sha256": "c866a4ea2cba599e1820ea43767c2e5a35aef40e56cb50de2712b7dbf1a4fd1e",
+        "dimensions": {
+          "width": 1280,
+          "height": 960
+        },
+        "kind": "photograph",
+        "original_sha256": "c866a4ea2cba599e1820ea43767c2e5a35aef40e56cb50de2712b7dbf1a4fd1e",
+        "activity_id": "feria-yanahuara-2017",
+        "year": "2017"
+      },
+      {
         "source": "https://www.gob.pe/institucion/serfor/noticias/773592-arequipa-serfor-y-rotary-club-internacional-inician-proyecto-de-reforestacion-con-primera-plantacion-de-4-mil-arboles",
         "credit": "SERFOR · Plataforma del Estado Peruano",
         "activitytitle": "Reforestación en La Pascana, Yura",
@@ -439,6 +502,27 @@
       }
     ],
     "donaciones": [
+      {
+        "filename": "assets/rua-v11-hazla-chili-2017-03.webp",
+        "width": 960,
+        "height": 855,
+        "alt": "Voluntarios con guantes organizan y pesan bolsas de residuos durante la limpieza del río Chili.",
+        "credit": "RUA Perú UNSA-Arequipa",
+        "context": "Recojo y organización de los residuos.",
+        "caption": "Recojo y organización de los residuos · 2017",
+        "source": "https://www.facebook.com/photo/?fbid=723432361165008&set=a.723431654498412",
+        "original_url": "https://www.facebook.com/photo/?fbid=723432361165008&set=a.723431654498412",
+        "media_retrieval": "Imagen original servida por el visor público de Facebook, descargada con downloadMedia; se conserva publicación estable como procedencia.",
+        "sha256": "1aace30264439b9fd3c7b1dd67e9fdf8479b2e58e6e94fcf773262fd4a209e25",
+        "dimensions": {
+          "width": 960,
+          "height": 855
+        },
+        "kind": "photograph",
+        "original_sha256": "1aace30264439b9fd3c7b1dd67e9fdf8479b2e58e6e94fcf773262fd4a209e25",
+        "activity_id": "hazla-chili-2017",
+        "year": "2017"
+      },
       {
         "source": "https://es.linkedin.com/posts/michell-alpaca_hilandoverde-activity-7401665797250777088-U7-d",
         "credit": "MICHELL Y CIA. S.A. · Hilando Verde",
@@ -572,6 +656,27 @@
     ],
     "convenios": [
       {
+        "filename": "assets/rua-v11-agua-colegio-2018-02.webp",
+        "width": 1600,
+        "height": 901,
+        "alt": "Voluntarios de RUA explican el cuidado del agua con imágenes proyectadas en el aula.",
+        "credit": "RUA Perú UNSA-Arequipa",
+        "context": "Educación ambiental desde el aula.",
+        "caption": "Educación ambiental desde el aula · 2018",
+        "source": "https://www.facebook.com/photo/?fbid=916571468517762&set=a.916565231851719",
+        "original_url": "https://www.facebook.com/photo/?fbid=916571468517762&set=a.916565231851719",
+        "media_retrieval": "Imagen original servida por el visor público de Facebook, descargada con downloadMedia; se conserva publicación estable como procedencia.",
+        "sha256": "b49336d99159df8f6746302c7789620f28c9a212ea665cb03dee27a4003d46f2",
+        "dimensions": {
+          "width": 1600,
+          "height": 901
+        },
+        "kind": "photograph",
+        "original_sha256": "b49336d99159df8f6746302c7789620f28c9a212ea665cb03dee27a4003d46f2",
+        "activity_id": "agua-colegio-2018",
+        "year": "2018"
+      },
+      {
         "id": "chili-accion-2",
         "filename": "assets/rua-v3-chili-accion-2.webp",
         "width": 1280,
@@ -681,6 +786,27 @@
     ],
     "participa": [
       {
+        "filename": "assets/rua-v11-enuma-lima-2018-03.webp",
+        "width": 960,
+        "height": 722,
+        "alt": "Participantes del ENUMA reunidos alrededor de una mesa con papeles y notas de trabajo.",
+        "credit": "RUA Perú UNSA-Arequipa",
+        "context": "Ideas compartidas durante una dinámica de trabajo.",
+        "caption": "Ideas compartidas durante una dinámica de trabajo · 2018",
+        "source": "https://www.facebook.com/photo/?fbid=1032556663585908&set=a.1032551990253042",
+        "original_url": "https://www.facebook.com/photo/?fbid=1032556663585908&set=a.1032551990253042",
+        "media_retrieval": "Imagen original servida por el visor público de Facebook, descargada con downloadMedia; se conserva publicación estable como procedencia.",
+        "sha256": "396a322bdf4e52b30689fa5fea740200b88359efe551f7210a1e6751fb8c7c45",
+        "dimensions": {
+          "width": 960,
+          "height": 722
+        },
+        "kind": "photograph",
+        "original_sha256": "396a322bdf4e52b30689fa5fea740200b88359efe551f7210a1e6751fb8c7c45",
+        "activity_id": "enuma-lima-2018",
+        "year": "2018"
+      },
+      {
         "source": "https://www.gob.pe/institucion/serfor/noticias/773592-arequipa-serfor-y-rotary-club-internacional-inician-proyecto-de-reforestacion-con-primera-plantacion-de-4-mil-arboles",
         "credit": "SERFOR · Plataforma del Estado Peruano",
         "activitytitle": "Reforestación en La Pascana, Yura",
@@ -785,6 +911,29 @@
         "sha256": "878b67b664c643f81c4e46807217a78f0b1a291b1b906741ffb78f2363232027",
         "kind": "photograph",
         "license": "Fotografía publicada por la fuente; no se declara licencia abierta. Reutilización solicitada por el usuario con atribución."
+      }
+    ],
+    "equipo-accion": [
+      {
+        "filename": "assets/rua-v11-enuma-lima-2018-02.webp",
+        "width": 960,
+        "height": 720,
+        "alt": "Delegación de RUA UNSA reunida durante el ENUMA de Lima, con credenciales de participación.",
+        "credit": "RUA Perú UNSA-Arequipa",
+        "context": "Compartir el viaje y el aprendizaje.",
+        "caption": "Compartir el viaje y el aprendizaje · 2018",
+        "source": "https://www.facebook.com/photo/?fbid=1032556596919248&set=a.1032551990253042",
+        "original_url": "https://www.facebook.com/photo/?fbid=1032556596919248&set=a.1032551990253042",
+        "media_retrieval": "Imagen original servida por el visor público de Facebook, descargada con downloadMedia; se conserva publicación estable como procedencia.",
+        "sha256": "01808b72ea04d1f50f958fe8668f5c0af4899d33a079c4cb3108eb523c50bb50",
+        "dimensions": {
+          "width": 960,
+          "height": 720
+        },
+        "kind": "photograph",
+        "original_sha256": "01808b72ea04d1f50f958fe8668f5c0af4899d33a079c4cb3108eb523c50bb50",
+        "activity_id": "enuma-lima-2018",
+        "year": "2018"
       }
     ]
   }

@@ -42,15 +42,29 @@ document.addEventListener('click', event => {
 });
 matchMedia('(max-width: 850px)').addEventListener('change', event => { if (event.matches) closeSocial(); });
 
+const storySearch = document.querySelector('#story-search');
+const storyYear = document.querySelector('#story-year');
+const normalizeSearch = value => value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+function filterStories() {
+  const category = document.querySelector('.filter-button[aria-pressed="true"]')?.dataset.filter || 'all';
+  const year = storyYear?.value || 'all';
+  const query = normalizeSearch(storySearch?.value.trim() || '');
+  let count = 0;
+  document.querySelectorAll('[data-story]').forEach(card => {
+    card.hidden = (category !== 'all' && card.dataset.story !== category)
+      || (year !== 'all' && card.dataset.year !== year)
+      || !normalizeSearch(card.dataset.search || '').includes(query);
+    if (!card.hidden) count++;
+  });
+  const counter = document.querySelector('#filter-count');
+  if (counter) counter.textContent = count ? `${count} ${count === 1 ? 'historia' : 'historias'}` : 'No encontramos historias con estos filtros. Prueba otro año o palabra.';
+}
+storySearch?.addEventListener('input', filterStories);
+storyYear?.addEventListener('change', filterStories);
 document.querySelectorAll('.filter-button').forEach(button => {
   button.addEventListener('click', () => {
     document.querySelectorAll('.filter-button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    let count = 0;
-    document.querySelectorAll('[data-story]').forEach(card => {
-      card.hidden = button.dataset.filter !== 'all' && card.dataset.story !== button.dataset.filter;
-      if (!card.hidden) count++;
-    });
-    document.querySelector('#filter-count').textContent = `${count} ${count === 1 ? 'historia' : 'historias'}`;
+    filterStories();
   });
 });
 
